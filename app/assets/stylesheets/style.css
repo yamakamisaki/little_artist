@@ -140,6 +140,122 @@ body{
   border-radius: 15px;
 }
 
+/* 新規登録画面・ログイン */
+
+.login{
+  width: 75%;
+}
+
+.login__wrapper{
+  width: 70%;
+  height: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.login__top{
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 45px;
+  font-size: 30px;
+  color: #565656;
+  border-bottom: 5px solid #84b8eb ;
+}
+
+.login__attention{
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 17px;
+  color: #565656;
+}
+
+.login__attention span{
+  color: #84b8eb;
+  margin-right: 15px;
+}
+
+form{
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.need{
+  height: 20px;
+  padding: 3px;
+  text-align: center;
+  background-color: rgb(255, 3, 3);
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  margin: 4px 0 0 10px;
+}
+
+.field{
+  margin-bottom: 30px;
+}
+
+.field__flex{
+  display: flex;
+}
+
+input,textarea{
+  width: 100%;
+  border: 1.5px solid #aaaaaa;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+}
+
+textarea{
+  height: 100px;
+}
+
+input{
+  padding: 10px;
+  font-size: 17px;
+}
+
+.field label{
+  color: #818181;
+  font-size: 16px;
+}
+
+.form__btn{
+  width: 50%;
+  text-align: center;
+  border: none;
+  background-color: #84b8eb;
+  color: #FFF;
+}
+
+/* 編集機能でのみ使用 */
+.delete__btn{
+  width: 50%;
+  text-align: center;
+  border: none;
+  background-color: #818181;
+  color: #FFF;
+}
+
+.exit__btn{
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border: none;
+  background-color: #84b8eb;
+  color: #FFF;
+  display: block;
+  border-radius: 5px;
+}
+
+
 /* トップページ（items index） */
 
 .index{
@@ -367,10 +483,6 @@ margin: 50px 0;
 background-color: #FFF9B1;
 }
 
-.comments_lists{
-
-}
-
 .comment__profile{
   display: flex;
   justify-content: space-between;
@@ -406,7 +518,7 @@ background-color: #FFF9B1;
  margin: 5px;
 }
 
-/*  */
+
 /*  */
 /*  */
 /*  */
@@ -428,11 +540,37 @@ background-color: #FFF9B1;
    .main-contents{
     width: 90%;
   }
-   
+
+ /* 新規登録・ログイン */
+  
+form{
+  width: 80%;
+}
+    
+.form__btn,
+.delete__btn{
+  width: 80%;
+} 
+
 }
 
  /* スマホ表示 */
 @media (max-width: 599px) {
+
+  /* 新規登録・ログイン・ユーザー登録情報編集 */
+  .login{
+    width: 90%;
+  }
   
-    
+  .login__wrapper{
+    width: 90%;
+  }
+  
+  .login__top{
+    width: 40%;
+  }
+  .login__attention{
+    font-size: 15px;
+  }
+  
 }

@@ -1,29 +1,65 @@
-<h2>Sign up</h2>
+<div class="topver"></div>
+
+<div class="main">
+  <div class="main-contents login">
+   <div class="login__wrapper">
+   
+      <div class="login__top">
+       新規登録
+      </div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <div class="field">
+        <div class="field__flex">
+            <%= f.label :name, "ユーザー名（10文字以内）" %>
+            <div class="need">必須</div><br />
+        </div>
+        <%= f.text_field :name %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
+      <div class="field">
+        <%= f.label :profile, "プロフィール"%><br />
+        <%= f.text_area :profile, class: :form__text, id:"user_profile",
+         placeholder: "例
+１歳の娘がいます。
+最近クレヨン遊びにハマっていて
+部屋中がキャンバスになっています！！" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
+      <div class="field">
+      <div class="field__flex">
+            <%= f.label :email, "メールアドレス" %>
+            <div class="need"> 必須 </div><br />
+        </div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
+      <div class="field">
+      <div class="field__flex">
+            <%= f.label :password , "パスワード（6文字以上）" %>
+            <div class="need">必須</div><br />
+        </div>
+        <%= f.password_field :password , id:"user_password", autocomplete: "new-password" %>
+      </div>
+
+      <div class="field">
+      <div class="field__flex">
+            <%= f.label :password_confirmation, "パスワード再入力" %>
+            <div class="need">必須</div><br />
+        </div>
+        <%= f.password_field :password_confirmation, id:"user_password_confirmation", autocomplete: "new-password" %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "新規登録", class: :form__btn  %>
+      </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
+
+   </div>
+  </div>
+</div>

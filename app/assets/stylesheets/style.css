@@ -146,7 +146,7 @@ body{
   width: 75%;
 }
 
-.login__wrapper{
+.form__wrapper{
   width: 70%;
   height: 90%;
   margin: auto;
@@ -154,7 +154,7 @@ body{
   margin-bottom: 30px;
 }
 
-.login__top{
+.form__top{
   width: 30%;
   text-align: center;
   margin: 0 auto;
@@ -255,6 +255,44 @@ input{
   border-radius: 5px;
 }
 
+/* 作品投稿機能（new） */
+
+.new{
+ width: 100%;
+}
+
+.post__field{
+  margin-bottom: 40px;
+}
+
+.post__field label{
+  color: #818181;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.form__age{
+  width: 100px;
+  margin-right: auto;
+}
+
+.field__flex__age{
+  display: flex;
+}
+
+.field__flex__age p{
+  font-size: 20px;
+}
+
+.form__text{
+  height: 200px;
+  font-size: 17px;
+}
+
+.form__text::placeholder,
+.form__tag::placeholder{
+  color: #aaaaaa;
+}
 
 /* トップページ（items index） */
 
@@ -415,7 +453,8 @@ text-align: right;
 }
 
 .edit__btn,
-.destroy__btn{
+.destroy__btn,
+.comment__btn{
   width: 200px;
   padding: 10px;
   background-color: rgb(175, 175, 175, 0.5);
@@ -469,9 +508,12 @@ text-align: right;
 }
 
 .comment__btn{
-  width: 50%;
-  display: block;
-  margin: 0 auto;
+  border: none;
+  background-color: #FFF9B1;
+}
+
+.comment__btn:hover{
+  background-color: #FFFCD6;
 }
 
 .comment-header{
@@ -530,7 +572,6 @@ background-color: #FFF9B1;
 /*  */
 /*  */
 /*  */
-/*  */
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -562,7 +603,7 @@ form{
     width: 90%;
   }
   
-  .login__wrapper{
+  .form__wrapper{
     width: 90%;
   }
   

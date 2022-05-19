@@ -1,0 +1,58 @@
+
+
+<%= form_with model: @item ,local: true do |f| %>
+
+     <%#= render 'shared/error_messages', model: f.object %> 
+
+
+      <div class="post__field">
+       <div class="field__flex">
+            <%= f.label :text, "コメント"%>
+            <div class="need">必須</div><br />
+        </div>
+        <%= f.text_area :profile, class: :form__text, id:"user_profile",
+         placeholder: "作っている時のつぶやきや表情はどんな風に見えましたか？
+１年後、５年後・・お子さんが大きくなった時にも残しておきたい成長の記録をぜひ残してください！" %>
+      </div>
+
+      <div class="post__field">
+        <div class="field__flex">
+            <%= f.label :age, "作った年齢（半角数字）" %>
+            <div class="need">必須</div><br />
+        </div>
+        <div class="field__flex__age">
+        <%= f.text_field :age, class: :form__age %>
+        <p>歳</p>
+        </div>
+      </div>
+
+
+      <div class="post__field">
+        <%= f.label :　, "タグ（複数の場合はスペースをご入力ください）"%><br />
+        <%= f.text_field :"タグ", class: :form__tag, id:"user_profile",
+         placeholder: "タグをつけると探しやすくなります" %>
+      </div>
+
+
+      <div class="post__field">
+        <%= f.label :material, "材料"%><br />
+        <%= f.text_area :material, class: :form__text, id:"user_profile",
+         placeholder: "例
+紙（なんでもOK）
+紙テープ、折り紙（100円ショップ）" %>
+      </div>
+
+      <div class="post__field">
+        <%= f.label :making, "作り方"%><br />
+        <%= f.text_area :making, class: :form__text, id:"user_profile",
+         placeholder: "例
+事前準備　紙に車の絵を書いておく
+①紙テープや折り紙をちぎる
+②のりでちぎった紙を貼り、カラフルな車が完成！" %>
+      </div>
+
+
+    <%= f.submit "送信する" , class: :form__btn %>
+    
+ 
+  <% end %>

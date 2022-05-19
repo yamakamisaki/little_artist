@@ -1,0 +1,89 @@
+ <div class="topver"></div>
+
+ <div class="main post">
+  <div class="main-contents posts">
+    <div class="post__wrapper">
+
+      <div class="post__contents">
+        <div class="post__image">
+         <div class="itemimagebox">
+         <%#= 上は消すこれを表示 image_tag "@item.image" %>
+         </div>
+       </div>
+      
+      <div class="post__top">
+        <p class="post__favorite">♡</p>
+        <%= link_to "@item.user.name" , 'user_path(@item)', class: :post__user %>
+      </div>
+      
+      <div class="post__tag">
+        <div class="center">
+        <div class="test">
+          <%#= @item.age , class: :show__text %>さい　
+          <%#= @item.tag , class: :show__text %>
+        </div>
+        </div>
+      </div>
+
+
+       <div class="post__text">
+          これは例文ですこれは例文ですこれは例文ですこれは例文ですこれは例文ですこれは例文ですこれは例文ですこれは例文ですこれ
+         <%#= @item.text , class: :show__text %>
+       </div>
+
+      <%# 投稿者とログインしているユーザーが同じであれば以下を表示 %>
+      <%# if user_signed_in? && current_user.id == @item.user_id %>
+        <div class="post__manage">
+          <%= link_to "編集する", "edit_prototype_path(@item.id)", class: :edit__btn %>
+          <%= link_to "削除する", "prototype_path(@item.id)", method: :delete ,class: :destroy__btn %>
+        </div>
+      <%# end %>
+      <%# // 投稿者とログインしているユーザーが同じであれば表示 %>
+      
+    </div>
+    
+ 
+  <div class="comments">
+    <div class="comments__contents">
+        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+        <%# if user_signed_in? %>
+            <%#= form_with model: [@item,@comment], local: true do |f|%>
+            <div class="comment__field">
+              <textarea class="comment__text" placeholder="コメントを入力する"></textarea>
+               <%#= f.text_field :text, class: :comment__text, placeholder :コメントを入力する %>
+               <br>
+               <input type="submit" value="コメントする" class="comment__btn" >
+               <%#= f.submit "送信する", class: :comment__btn  %>
+            </div>
+            <%# end %>
+        <%# end %>
+        <%# // ログインしているユーザーには上記を表示する %>
+        
+        <div class="comment-header">
+        画像を入れる
+        </div>
+
+        <ul class="comments_lists">
+          <%# @comments.each do |comment| %>
+            <li class="comments_list">
+             <div class="comment__profile">
+              <div class="comment_img">
+               <%#= comment.user.image , class: :comment_img %>
+               </div>
+              <%#= comment.content , class: :comment_text %>
+              <div class="comment_text">これは例文ですこれは例文ですこれは例文です</div>
+            </div>
+              <a href="#" class="comment_user">yusaokayu</a>
+              <%#= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+            </li>
+
+
+
+          <%# end %>
+        </ul>
+      </div>
+   </div>
+
+  </div>
+ </div>
+</div>

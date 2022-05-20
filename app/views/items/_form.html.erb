@@ -2,10 +2,13 @@
 
 <%= form_with model: @item ,local: true do |f| %>
 
-     <%#= render 'shared/error_messages', model: f.object %> 
+     <%= render 'shared/error_messages', model: f.object %> 
 
       <div class="field">
-          <%= f.label :image, "作品" %><br />
+         <div class="field__flex">
+             <%= f.label :image, "作品" %>
+             <div class="need">必須</div><br />
+        </div>
           <%= f.file_field :image %>
       </div>
 
@@ -14,7 +17,7 @@
             <%= f.label :text, "コメント"%>
             <div class="need">必須</div><br />
         </div>
-        <%= f.text_area :profile, class: :form__text, id:"user_profile",
+        <%= f.text_area :text, class: :form__text, id:"user_profile",
          placeholder: "作っている時のつぶやきや表情はどんな風に見えましたか？
 １年後、５年後・・お子さんが大きくなった時にも残しておきたい成長の記録をぜひ残してください！" %>
       </div>

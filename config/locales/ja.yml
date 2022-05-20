@@ -4,6 +4,7 @@ ja:
       user:
         name: 名前
         email: メールアドレス
+        profile: プロフィール
       # item:
         # text: テキスト
         # image: 画像

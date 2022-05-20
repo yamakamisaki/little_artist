@@ -16,14 +16,6 @@
 
       <div class="field">
       <div class="field__flex">
-            <%= f.label :name, "ユーザー名（10文字以内）" %>
-            <div class="need"> 必須 </div><br />
-        </div>
-        <%= f.text_field :name %>
-      </div>
-
-      <div class="field">
-      <div class="field__flex">
             <%= f.label :email, "メールアドレス" %>
             <div class="need"> 必須 </div><br />
         </div>
@@ -47,6 +39,14 @@
       </div>
 
       <br><br><br>
+
+            <div class="field">
+                <div class="field__flex">
+                <%= f.label :name, "ユーザー名（10文字以内）" %>
+                <div class="need"> 必須 </div><br />
+             </div>
+                <%= f.text_field :name %>
+            </div>
 
 
             <div class="field">

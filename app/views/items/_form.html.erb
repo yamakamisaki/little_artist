@@ -4,6 +4,10 @@
 
      <%#= render 'shared/error_messages', model: f.object %> 
 
+      <div class="field">
+          <%= f.label :image, "作品" %><br />
+          <%= f.file_field :image %>
+      </div>
 
       <div class="post__field">
        <div class="field__flex">

@@ -315,14 +315,15 @@ input{
   margin-bottom: 20px;
 }
 
+.form__age{
+  width: 100px;
+}
+
 .field__flex__age{
   display: flex;
   justify-content: flex-end;
 }
 
-.form__age{
-  width: 100px;
-}
 
 .field__flex__age p{
   font-size: 20px;

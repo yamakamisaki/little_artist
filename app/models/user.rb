@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   mount_uploader :image, ImageUploader
-  
 
   has_many :items, dependent: :destroy
   # has_many :comments, dependent: :destroy
@@ -17,6 +16,5 @@ class User < ApplicationRecord
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
   end
 
-    validates :profile, length: { maximum: 150 }
-
+  validates :profile, length: { maximum: 150 }
 end

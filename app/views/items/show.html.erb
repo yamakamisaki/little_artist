@@ -51,7 +51,7 @@
       <%# 投稿者とログインしているユーザーが同じであれば以下を表示 %>
       <% if user_signed_in? && current_user.id == @item.user_id %>
         <div class="post__manage">
-          <%= link_to "編集する", "edit_prototype_path(@item.id)", class: :edit__btn %>
+          <%= link_to "編集する", edit_item_path(@item), class: :edit__btn %>
           <%= link_to "削除する", "prototype_path(@item.id)", method: :delete ,class: :destroy__btn %>
         </div>
       <% end %>

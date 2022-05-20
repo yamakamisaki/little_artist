@@ -9,148 +9,17 @@
 
   <div class="item__wrapper">
 
-  <%# 全てのデータ.each do |items| %>
+  <% @items.each do |items| %>
 
     <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
+      <%= link_to image_tag( items.image , class: :item__img ),  item_path(items.id)%> 
       <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
+        <%= link_to items.user.name , user_path(items.user_id), class: :item__user %>
         <p class="item__favorite">♡</p>
       </div>
     </div>  
 
-<div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    <div class="item">
-      <a href="#" class="item__img"></a>
-      <%#= link_to "image_tag( items.image , class: :item__img )",  "リンク先詳細の_path(items.id)"%> 
-      <div class="item__body">
-        <%= link_to "items.user.name" , "user_path(items.user_id)", class: :item__user %>
-        <p class="item__favorite">♡</p>
-      </div>
-    </div> 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <%# end %>
+  <% end %>
 
   </div>
  </div>

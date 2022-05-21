@@ -65,6 +65,9 @@
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
             <%= form_with model: [@item,@comment], local: true do |f|%>
+
+             <%= render 'shared/error_messages', model: f.object %> 
+
             <div class="comment__field">
                <%= f.text_field :text, class: :post__comment, placeholder: 'コメントを入力する' %>
                <br>

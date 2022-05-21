@@ -10,12 +10,12 @@ RSpec.describe Comment, type: :model do
 
   describe 'コメント投稿' do
     context 'コメント投稿できる場合' do
-      it "text,user_id,item_idの値がある場合は投稿できる" do
+      it 'text,user_id,item_idの値がある場合は投稿できる' do
         expect(@comment).to be_valid
       end
     end
     context 'コメント投稿できない場合' do
-      it "textが空では投稿できない" do
+      it 'textが空では投稿できない' do
         @comment.text = ''
         @comment.valid?
         expect(@comment.errors.full_messages).to include('コメントを入力してください')

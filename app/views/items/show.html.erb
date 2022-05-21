@@ -64,15 +64,13 @@
     <div class="comments__contents">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-            <%#= form_with model: [@item,@comment], local: true do |f|%>
+            <%= form_with model: [@item,@comment], local: true do |f|%>
             <div class="comment__field">
-              <textarea class="comment__text" placeholder="コメントを入力する"></textarea>
-               <%#= f.text_field :text, class: :comment__text, placeholder :コメントを入力する %>
+               <%= f.text_field :text, class: :post__comment, placeholder: 'コメントを入力する' %>
                <br>
-               <input type="submit" value="コメントする" class="comment__btn" >
-               <%#= f.submit "送信する", class: :comment__btn  %>
+               <%= f.submit "コメントする", class: :comment__btn  %>
             </div>
-            <%# end %>
+            <% end %>
         <% end %>
         <%# // ログインしているユーザーには上記を表示する %>
         
@@ -81,21 +79,23 @@
         </div>
 
         <ul class="comments_lists">
-          <%# @comments.each do |comment| %>
+
+          <% @comments.each do |comment| %>
             <li class="comments_list">
-             <div class="comment__profile">
-              <div class="comment_img">
-               <%#= comment.user.image , class: :comment_img %>
-               </div>
-              <%#= comment.content , class: :comment_text %>
-              <div class="comment_text">
-              これは例文ですこれは例文ですこれは例文です</div>
-            </div>
-              <a href="#" class="comment_user">yusaokayu</a>
-              <%#= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+              <div class="comment__profile">
+                <div class="comment_img">
+                <%= comment.user.image  %>
+                <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+                </div>
+              
+                <div class="comment_text">
+                <%= comment.text %>
+                </div>
+              </div>
+                
             </li>
 
-          <%# end %>
+          <% end %>
         </ul>
       </div>
    </div>

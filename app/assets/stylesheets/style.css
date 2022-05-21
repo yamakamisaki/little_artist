@@ -75,7 +75,7 @@ body{
 .nav__btn2{
  margin-right: 20px;
  background-color: rgb(175, 175, 175, 0.5);
- color: rgb(112, 112, 112);
+ color: rgb(112, 112, 112, 0.9);
  font-weight: bold;
  font-size: 17px;
  padding: 20px 20px;
@@ -118,7 +118,7 @@ body{
 }
 
 .pulldown__text{
-  color: rgb(135, 137, 102);
+  color: rgb(135, 137, 102, 0.9);
   font-size: 17px;
   font-weight: bold;
   display: block;
@@ -233,7 +233,7 @@ form{
   height: 20px;
   padding: 3px;
   text-align: center;
-  background-color: rgb(255, 3, 3);
+  background-color: rgb(255, 3, 3, 0.9);
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
@@ -506,10 +506,10 @@ text-align: right;
   width: 200px;
   padding: 10px;
   background-color: rgb(175, 175, 175, 0.5);
-  color: rgb(112, 112, 112);
+  color: rgb(112, 112, 112, 0.9);
   font-weight: bold;
   font-size: 17px;
-  border-radius:  50% 60% 50% 70% ;
+  border-radius:  50% 60% 50% 70% rgb(112, 112, 112, 0.9);
   text-align: center;
 }
 

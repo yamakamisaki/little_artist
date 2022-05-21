@@ -74,8 +74,8 @@ body{
 .nav__btn,
 .nav__btn2{
  margin-right: 20px;
- background-color: rgb(175, 175, 175, 0.5);
- color: rgb(112, 112, 112, 0.9);
+ background-color: #ebeced;
+ color: #818181;
  font-weight: bold;
  font-size: 17px;
  padding: 20px 20px;
@@ -118,7 +118,7 @@ body{
 }
 
 .pulldown__text{
-  color: rgb(135, 137, 102, 0.9);
+  color: #73735a;
   font-size: 17px;
   font-weight: bold;
   display: block;
@@ -126,7 +126,7 @@ body{
 
 .pulldown__text:hover{
   color: #FFF;
-  background-color: #91aeff;
+  background-color: #84b8eb;
   border-radius: 5px;
 }
 
@@ -233,7 +233,7 @@ form{
   height: 20px;
   padding: 3px;
   text-align: center;
-  background-color: rgb(255, 3, 3, 0.9);
+  background-color: red;
   color: #fff;
   font-size: 12px;
   border-radius: 3px;
@@ -366,7 +366,7 @@ input{
   height: 300px;
   display: block;
   border-radius: 5px;
-  box-shadow: 8px 8px 2px 1px rgba(199, 199, 199, 0.1);
+  box-shadow: 8px 8px 2px 1px  #f5f5f5;
 }
 
 .item__body{
@@ -431,15 +431,9 @@ input{
   margin-top: 20px;
   margin-bottom: 10px;
   border-radius: 10px;
-  box-shadow: 8px 8px 2px 1px rgba(199, 199, 199, 0.4);
+  box-shadow: 8px 8px 2px 1px #f5f5f5;
 }
 
-.itemimagebox{
-/* 最終的に消去 */
-  width: 500px;
-  height: 500px;
-  background-color: #aaaaaa;
-}
 
 .post__tag{
   width: 500px;
@@ -505,11 +499,11 @@ text-align: right;
 .comment__btn{
   width: 200px;
   padding: 10px;
-  background-color: rgb(175, 175, 175, 0.5);
-  color: rgb(112, 112, 112, 0.9);
+  background-color: #d6d6d6;
+  color: #818181;
   font-weight: bold;
   font-size: 17px;
-  border-radius:  50% 60% 50% 70% rgb(112, 112, 112, 0.9);
+  border-radius:  50% 60% 50% 70%;
   text-align: center;
 }
 
@@ -629,7 +623,7 @@ background-color: #FFF9B1;
   width: 70%;
   height: 400px;
   border-radius: 20px;
-  box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.9);
+  box-shadow: 8px 8px 2px 1px #dcd4ff;
   margin: auto;
   margin-top: 90px;
   margin-bottom: 150px;

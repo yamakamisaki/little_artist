@@ -11,3 +11,5 @@ ja:
         age:   年齢
         material: 材料
         making:   作り方
+      comment:
+        text:  コメント

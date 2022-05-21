@@ -95,6 +95,8 @@
                 <%= comment.text %>
                 </div>
               </div>
+               
+                <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn %>
                 
             </li>
 

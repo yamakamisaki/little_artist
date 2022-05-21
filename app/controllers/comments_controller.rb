@@ -11,6 +11,16 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    comment = Comment.find_by(id: params[:id],item_id: params[:item_id])
+    if current_user.id == comment.user.id
+       comment.destroy
+       redirect_to "/items/#{comment.item.id}"
+    else
+      render "items/show"
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit(:text).merge(user_id: current_user.id, item_id: params[:item_id])

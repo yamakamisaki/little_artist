@@ -13,4 +13,13 @@ class Item < ApplicationRecord
 
   validates :material, length: { maximum: 200 }
   validates :making, length: { maximum: 200 }
+
+  # def self.search(search)
+  #   if search != ""
+  #     Item.where('text LIKE(?)', "%#{search}%").where(user_id: 5)
+  #   else
+  #     Item.all.order('created_at DESC')
+  #   end
+  # end
+
 end

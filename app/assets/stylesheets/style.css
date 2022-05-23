@@ -185,6 +185,7 @@ body{
 
 .search__form::placeholder{
   color: #b5b3b3;
+  text-align: center;
 }
 
 .search__submit{
@@ -690,9 +691,6 @@ background-color: #FFF9B1;
 }
 
 .profile__user__img{
-  background-color: #dddddd;
-  /* 最終的に消去 */
-
   width: 200px;
   height: 200px;
   border-radius: 100px;

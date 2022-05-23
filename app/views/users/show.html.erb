@@ -1,7 +1,15 @@
-  <div class="topver">
-   <div class="topver-search"></div>
-  </div>
 
+  <div class="topver">
+
+     <div class="topver-search">
+          <%= search_form_for @q, url: search_items_path, class: :search__forms do |f| %>
+                <%= f.text_field :text_or_age_or_material_or_making_cont, placeholder: '検索したいワードを入力', class: :search__form %>
+                <%= f.radio_button :user_id_eq, '' %><p class="search__radiobtn">全てから<br>探す</p>
+                <%= f.radio_button :user_id_eq, @search_user %><p class="search__radiobtn">このページ<br>から探す</p>
+                <%= f.submit '検索', class: :search__submit %>
+          <% end %>
+  </div>
+</div>
 
 <div class="main">
   <div class="main-contents">

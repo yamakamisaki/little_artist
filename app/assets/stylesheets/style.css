@@ -104,7 +104,7 @@ body{
 
   width: 210px;
   margin-top: 20px;
-  background-color: #e6ddb1;
+  background-color: #FFFAB3;
   border-radius: 10px;
   padding: 20px;
 }
@@ -161,11 +161,52 @@ body{
 }
 
 .topver-search{
-  width: 400px;
+  width: 60%;
+  height: 50px;
+}
+
+.search__forms{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 0;
+ }
+
+ .search__form{
+  width: 60%;
   height: 40px;
+  color: #565656;
   background-color: #FFFCD6;
   border-radius: 50px;
- }
+  border: none;
+  margin: auto 3px auto auto;
+}
+
+.search__form::placeholder{
+  color: #b5b3b3;
+}
+
+.search__submit{
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  line-height: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: #84b8eb;
+  color: #FFF;
+  margin: auto;
+}
+
+.search__radiobtn{
+  font-size: 12px;
+  background-color: #FFF;
+  border: none;
+  padding: 6px;
+  border-radius: 50px ;
+  margin-right: 3px;
+}
 
 .main{
   width: 100%;
@@ -248,7 +289,7 @@ form{
   display: flex;
 }
 
-input,textarea{
+.field input,textarea{
   width: 100%;
   border: 1.5px solid #aaaaaa;
   border-radius: 5px;
@@ -317,6 +358,7 @@ input{
 
 .form__age{
   width: 100px;
+  margin: auto 15px auto auto;
 }
 
 .field__flex__age{

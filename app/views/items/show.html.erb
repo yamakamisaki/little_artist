@@ -87,7 +87,12 @@
             <li class="comments_list">
               <div class="comment__profile">
                 <div class="comment_img">
-                <%= comment.user.image  %>
+                  <% if comment.user.image?%>
+                      <%= image_tag comment.user.image.url  , class: :comment_img %>
+                  <% else %>
+                      <%= image_tag "/assets/default.png", class: :comment_img %>
+                  <% end %>
+
                 <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
                 </div>
               
@@ -95,9 +100,9 @@
                 <%= comment.text %>
                 </div>
               </div>
-               
+               <% if user_signed_in? && ( current_user.id ==  @item.user_id || current_user.id == comment.user.id ) %>
                 <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn %>
-                
+              <% end %>
             </li>
 
           <% end %>

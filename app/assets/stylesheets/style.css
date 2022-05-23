@@ -177,6 +177,7 @@ body{
  .search__form{
   width: 60%;
   height: 40px;
+  color: #565656;
   background-color: #FFFCD6;
   border-radius: 50px;
   border: none;

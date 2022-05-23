@@ -1,12 +1,7 @@
 
 
 <div class="topver">
-   <div class="topver-search" id="topver-searchs">
-          <%= search_form_for @q, url: search_items_path, html: {id: "topver-searchs"} do |f| %>
-                <%= f.text_field :text_or_age_or_material_or_making_cont, placeholder: '検索したいワードを入力' %>
-                <%= f.submit '検索' %>
-          <% end %>
-  </div>
+   <%= render partial: "searchver" %> 
 </div>
 
 <div class="main">

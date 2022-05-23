@@ -13,5 +13,4 @@ class Item < ApplicationRecord
 
   validates :material, length: { maximum: 200 }
   validates :making, length: { maximum: 200 }
-
 end

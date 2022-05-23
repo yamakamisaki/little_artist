@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   before_action :set_search, only: [:show]
 
   def show
@@ -8,12 +7,10 @@ class UsersController < ApplicationController
     @items = @user.items
   end
 
-private
+  private
 
-def set_search
-  @q = Item.ransack(params[:q])
-  @item = @q.result
-end
-
-
+  def set_search
+    @q = Item.ransack(params[:q])
+    @item = @q.result
+  end
 end

@@ -68,5 +68,4 @@ class ItemsController < ApplicationController
     @q = Item.ransack(params[:q])
     @search_item = @q.result.order('created_at DESC')
   end
-
 end

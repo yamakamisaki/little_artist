@@ -20,6 +20,6 @@ class User < ApplicationRecord
   validates :profile, length: { maximum: 150 }
 
   def favorited?(item)
-    self.favorites.exists?(item_id: item.id)
+    favorites.exists?(item_id: item.id)
   end
 end

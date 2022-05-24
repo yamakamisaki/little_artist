@@ -12,7 +12,7 @@ class CommentsController < ApplicationController
 
   def destroy
     comment = Comment.find_by(id: params[:id], item_id: params[:item_id])
-    if ( current_user.id ==  comment.user.id || current_user.id == Item.user.id )
+    if current_user.id == comment.user.id || current_user.id == Item.user.id
       comment.destroy
       redirect_to "/items/#{comment.item.id}"
     else

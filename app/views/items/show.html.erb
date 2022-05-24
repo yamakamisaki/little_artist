@@ -1,8 +1,15 @@
+<% breadcrumb :items %>
  <div class="topver"></div>
 
  <div class="main post">
   <div class="main-contents posts">
     <div class="post__wrapper">
+
+        <%# 以下パン屑リスト %>
+        <div class="page__list">
+          <%= breadcrumbs separator: " &rsaquo; " %>
+        </div>
+        <%# /パン屑リスト %>
 
       <div class="post__contents">
         <div class="post__image">

@@ -64,3 +64,4 @@ gem 'carrierwave'
 gem 'rails-i18n'
 gem 'ransack'
 gem 'pry-rails'
+gem "gretel"

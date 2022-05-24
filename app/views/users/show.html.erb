@@ -1,4 +1,5 @@
 
+<% breadcrumb :users %>
   <div class="topver">
 
      <div class="topver-search">
@@ -13,6 +14,12 @@
 
 <div class="main">
   <div class="main-contents">
+
+        <%# 以下パン屑リスト %>
+        <div class="page__list">
+          <%= breadcrumbs separator: " &rsaquo; " %>
+        </div>
+        <%# /パン屑リスト %>
 
       <div class="form__top profile">
        <p>プロフィール</p>

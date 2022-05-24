@@ -430,11 +430,18 @@ input{
 
 .item__favorite{
   font-size: 25px;
-  color: red;
+  margin-right: 5px;
+}
+
+.favorite__count{
+  font-size: 20px; 
+  font-weight: bold;
+
 }
 
 .item__user{
   font-size: 20px;
+  font-weight: bold;
 }
 
 /* 投稿詳細ページ（show） */
@@ -463,6 +470,7 @@ input{
   display: flex;
   justify-content : space-between ;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .post__user{

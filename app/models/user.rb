@@ -8,7 +8,8 @@ class User < ApplicationRecord
 
   has_many :items, dependent: :destroy
   has_many :comments, dependent: :destroy
-  # has_many :favorites, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  # has_many :favorite_items, through: :favorites, source: :item
 
   with_options presence: true do
     validates :name, length: { maximum: 10 }
@@ -17,4 +18,8 @@ class User < ApplicationRecord
   end
 
   validates :profile, length: { maximum: 150 }
+
+  def favorited?(item)
+    self.favorites.exists?(item_id: item.id)
+  end
 end

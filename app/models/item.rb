@@ -2,7 +2,8 @@ class Item < ApplicationRecord
   belongs_to :user
   has_one_attached :image
   has_many :comments, dependent: :destroy
-  # has_many :favorites, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  # has_many :favorite_users, through: :favorites, source: :user
 
   with_options presence: true do
     validates :image

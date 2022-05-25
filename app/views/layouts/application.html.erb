@@ -10,6 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%# <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
      %>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
 
   <body>
@@ -38,13 +39,9 @@
                       <%= link_to "投稿する", new_item_path,class: :pulldown__text%>
                    </li>
                    <li class="pull-down-list">
-                      <%= link_to "お気に入り一覧", "new_prototype_path",class: :pulldown__text %>
-                   </li>
-                   <li class="pull-down-list">
                       <%= link_to "設定", edit_user_registration_path, class: :pulldown__text %>
                   </li>
                 </ul>
-
 
            <%# /ログイン時 %>
 

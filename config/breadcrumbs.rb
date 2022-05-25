@@ -12,6 +12,12 @@ crumb :users do
   parent :root
 end
 
+crumb :favorites do
+  link "お気に入りした作品", favorites_user_path
+  parent :users
+end
+
+
 # crumb :projects do
 #   link "Projects", projects_path
 # end

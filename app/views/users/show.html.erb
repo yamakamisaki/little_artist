@@ -48,6 +48,7 @@
                 <div class="profile__user__follows">
                   <p>フォロー</p><div class="profile__user__follow">３０</div>
                   <p>フォロワー</p><div class="profile__user__follow">５０００</div>
+                  <%= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: :profile__favorite %>
                 </div>
 
                 <div class="profile__user__profile">
@@ -55,7 +56,6 @@
                   <%= @user.profile %>
                   </div>
               </div>
-
           </div>
 
        </div>
@@ -93,5 +93,10 @@
 
     <% end %>
    </div>
+
+        <div class="item__paginate">
+          <%= paginate @items %>
+        </div>
+
   </div>
 </div>

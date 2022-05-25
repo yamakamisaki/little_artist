@@ -1,0 +1,35 @@
+ <% breadcrumb :favorites %>
+ <div class="topver"></div>
+  <div class="main">
+   <div class="main-contents">
+
+        <%# 以下パン屑リスト %>
+        <div class="page__list">
+          <%= breadcrumbs separator: " &rsaquo; " %>
+        </div>
+        <%# /パン屑リスト %>
+
+       <div class="form__top">
+          <p>お気に入りした作品</p>
+        </div>
+        <br><br><br>
+
+     <div class="item__wrapper">
+
+
+          <% if @favorites.present? %>
+            <% @favorites.each do |item| %>
+
+              <div class="item">
+                <%#= link_to image_tag( item.image , class: :item__img ),  "item_path(item.id)" %> 
+                <div class="item__body">
+                        <span class="item__favorite">❤️</span>
+                        <%= link_to item.user.name , user_path(item.user_id), class: :item__user %>
+                </div>
+              </div>  
+              <% end %>
+            </div>
+          <% end %>
+      </div>  
+   </div> 
+</div> 

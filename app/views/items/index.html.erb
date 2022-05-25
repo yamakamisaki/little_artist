@@ -28,9 +28,9 @@
                     <% end %>
               <% end %>
         <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :item__favorite%>
+               <%=link_to '🤍', new_user_session_path, class: :item__favorite %>
         <% end %>
-        <%= link_to items.user.name , user_path(items.user_id), class: :item__user %>
+        <%= link_to items.user.name , user_path(items.user_id), class: :item__user, id:"iine" %>
       </div>
     </div>  
 

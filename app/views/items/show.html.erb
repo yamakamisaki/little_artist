@@ -85,14 +85,14 @@
     <div class="comments__contents">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-            <%= form_with model: [@item,@comment], local: true do |f|%>
+            <%= form_with model: [@item,@comment], local: true do |f| %>
 
              <%= render 'shared/error_messages', model: f.object %> 
 
             <div class="comment__field">
                <%= f.text_field :text, class: :post__comment, placeholder: 'コメントを入力する' %>
                <br>
-               <%= f.submit "コメントする", class: :comment__btn  %>
+               <%= f.submit "コメントする", class: :comment__btn %>
             </div>
             <% end %>
         <% end %>
@@ -103,7 +103,6 @@
         </div>
 
         <ul class="comments_lists">
-
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <div class="comment__profile">
@@ -125,10 +124,10 @@
                 <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn %>
               <% end %>
             </li>
-
           <% end %>
         </ul>
       </div>
+
    </div>
 
   </div>

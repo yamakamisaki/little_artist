@@ -1,10 +1,10 @@
 class CommentsController < ApplicationController
   def create
+    @item = Item.find(params[:item_id])
     @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to "/items/#{@comment.item.id}"
+      render :item_comments
     else
-      @item = Item.find(params[:item_id])
       @comments = @item.comments.includes(:user)
       render 'items/show'
     end
@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
     comment = Comment.find_by(id: params[:id], item_id: params[:item_id])
     if current_user.id == comment.user.id || current_user.id == Item.user.id
       comment.destroy
-      redirect_to "/items/#{comment.item.id}"
+      render :item_comments
     else
       render 'items/show'
     end

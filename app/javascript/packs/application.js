@@ -9,8 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../nav")
 require('jquery')
-require("../comment")
-
+require('../../../app/views/comments/item_comments')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

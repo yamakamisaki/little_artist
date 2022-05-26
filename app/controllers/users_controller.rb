@@ -10,10 +10,7 @@ class UsersController < ApplicationController
 
   def favorites
     redirect_to root_path unless current_user.id 
-    # favorites = Favorite.where(user_id: current_user.id).pluck(:item_id)
-    # @favorite_items = Favorite.find(favorites)
-    # @favorite_items = current_user.favorites
-    @favorites = Favorite.where(user_id: @user.id).all
+    @favorites = Favorite.where(user_id: @user.id).all.page(params[:page]).per(9)
   end
 
   private

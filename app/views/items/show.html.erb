@@ -48,8 +48,11 @@
         </div>
       </div>
 
+
+
+
        <div class="box26">
-          <span class="box-title">コメント</span>
+          <%= image_tag "comment.png", class:"box-title" %>
              <div class="post__time">
                <p>投稿日時　</p><%= @item.created_at.strftime('%Y/%m/%d %H:%M') %>
              </div>
@@ -58,7 +61,7 @@
 
       <% if @item.material? %>
         <div class="box26">
-          <span class="box-title">材料</span>
+          <%= image_tag "material.png", class:"box-title" %>
               <div class="post__time"><p>　</p></div>
               <p><%= @item.material %></p>
        </div>
@@ -66,7 +69,7 @@
 
       <% if @item.making? %>
        <div class="box26">
-          <span class="box-title">作り方</span>
+          <%= image_tag "making.png", class:"box-title" %>
               <div class="post__time"><p>　</p></div>
               <p><%= @item.making %></p>
         </div>
@@ -83,11 +86,8 @@
       
     </div>
     
- 
      <div class="comments">
-        <div class="comment-header">
-        画像を入れる
-        </div>
+        <%= image_tag "comments.png", class:"comment-header" %>
       </div>
       
      <div class="comments">

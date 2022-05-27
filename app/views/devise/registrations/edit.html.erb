@@ -61,7 +61,7 @@
 
 
 
-            <div class="actions">
+            <div class="field">
               <%= f.submit "変更する", class: :form__btn %>
             </div>
           <% end %>
@@ -70,13 +70,9 @@
        <span>！</span>アカウントを削除する場合はこちらから
       </div>
 
-
+      <div class="field">
           <%= button_to "退会する", registration_path(resource_name), data: { confirm: "データが消えてしまいますが、本当によろしいですか？" }, method: :delete, class: :delete__btn %>
-
-          <%= link_to "←トップページに戻る", :back, class: :exit__btn %>
-
-
-
+      </div>
 
 
    </div>

@@ -1,4 +1,4 @@
-<%= form_with model: [@item,@comment] do |f| %>
+<%= form_with model: [@item,@comment] , class: :comment__form do |f| %>
 
     <%= render 'shared/error_messages', model: f.object %> 
 

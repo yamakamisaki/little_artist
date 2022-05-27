@@ -24,7 +24,7 @@
 
       <div class="post__field">
         <div class="field__flex">
-            <%= f.label :age, "作った年齢（半角数字）" %>
+            <%= f.label :age, "作った年齢（半角数字で入力してください）" %>
             <div class="need">必須</div><br />
         </div>
         <div class="field__flex__age">
@@ -32,14 +32,6 @@
         <p>歳</p>
         </div>
       </div>
-
-
-      <div class="post__field">
-        <%= f.label :　, "タグ（複数の場合はスペースをご入力ください）"%><br />
-        <%= f.text_field :"タグ", class: :form__tag, id:"user_profile",
-         placeholder: "タグをつけると探しやすくなります" %>
-      </div>
-
 
       <div class="post__field">
         <%= f.label :material, "材料"%><br />
@@ -58,7 +50,7 @@
 ②のりでちぎった紙を貼り、カラフルな車が完成！" %>
       </div>
 
-    
+    <div class="field">
       <%= f.submit "送信する" , class: :form__btn %>
- 
+    </div>
   <% end %>

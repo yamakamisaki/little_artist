@@ -48,9 +48,6 @@
         </div>
       </div>
 
-
-
-
        <div class="box26">
           <%= image_tag "comment.png", class:"box-title" %>
              <div class="post__time">
@@ -101,13 +98,16 @@
 
   <div class="comments">
     <div class="comments__contents">
+
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
+              <%= image_tag "comment_post.png", class:"comment-header" %>
 
-        <div class="new-comment">
-          <%= render 'comments/form', item: @item, comment: @comment %>
-        </div>
-       
+            <div class="new-comment">
+              <%= render 'comments/form', item: @item, comment: @comment %>
+            </div>
+        <% else %>
+            <div class="comment__var"></div>
         <% end %>
         <%# // ログインしているユーザーには上記を表示する %>
       </div>

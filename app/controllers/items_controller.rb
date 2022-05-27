@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :set_search, only: [:index, :search]
 
   def index
-    @items = Item.all.order('created_at DESC').page(params[:page]).per(9)
+    @items = Item.all.order('created_at DESC').page(params[:page]).per(12)
   end
 
   def new
@@ -57,6 +57,6 @@ class ItemsController < ApplicationController
 
   def set_search
     @q = Item.ransack(params[:q])
-    @search_item = @q.result.order('created_at DESC').page(params[:page]).per(9)
+    @search_item = @q.result.order('created_at DESC').page(params[:page]).per(12)
   end
 end

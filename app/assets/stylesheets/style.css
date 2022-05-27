@@ -552,7 +552,7 @@ input{
   align-items : center ;
 }
 
-.post__wrapper{
+.post__wrapper{  
   width: 100%;
   height: 90%;
 }
@@ -721,7 +721,6 @@ input{
   color: #FFF;
 }
 
-
 /* コメント */
 
 .comments{
@@ -736,18 +735,17 @@ input{
 }
 
 .comment__form{
-  width: 400px;
+  width: 100%;
 }
 
 .comment__field{
   width: 100%;
+  text-align: center;
 }
 
 .post__comment{
   width: 100%;
   height: 150px;
-  display: block;
-  margin: 0 auto;
   border: 2px solid #aaaaaa;
   border-radius: 5px;
 }
@@ -759,6 +757,7 @@ input{
 .comment__btn{
   border: none;
   background-color: #FFF9B1;
+  margin-top: 20px;
 }
 
 .comment__btn:hover{
@@ -766,10 +765,10 @@ input{
 }
 
 .comment-header{
-width: 700px;
-height: 80px;
-border-radius: 5px;
-margin: 50px 0;
+  width: 700px;
+  height: 80px;
+  border-radius: 5px;
+  margin: 50px 0;
 }
 
 .comment__var{
@@ -780,9 +779,8 @@ margin: 50px 0;
   margin: 30px 0;
 }
 
-.comment__none{
-  font-size: 19px;
-  font-weight: bold;
+.comments_list{
+  margin-bottom: 30px;
 }
 
 .comment__profile{
@@ -791,34 +789,35 @@ margin: 50px 0;
 }
 
 .comment_img{
-  background-color: #84b8eb;
-
   width: 100px;
   height: 100px;
   border-radius: 100px;
-}
-
-.comments_list{
-  margin-bottom: 30px;
+  margin-right: 20px;
+  object-fit: cover;
 }
 
 .comment_text{
   width: 550px;
-  padding: 20px;
-  margin-left: 20px;
+  padding: 10px 20px 20px 20px;
   font-size: 17px;
-  margin: 0 auto;
   border: 2px solid #aaaaaa;
   border-radius: 5px;
 }
 
 .comment_user{
- width: 100px;
- color: #818181;
- font-size: 17px;
- text-align: center;
- margin: 5px;
+ color: #529ae2;
+ font-size: 15px;
 }
+
+.destroy{
+  text-align: right;
+  margin-top: 10px;
+}
+
+.comment__none{
+  font-size: 19px;
+  font-weight: bold;
+} 
 
 /* マイページ（users/show） */
 
@@ -869,6 +868,7 @@ margin: 50px 0;
   width: 200px;
   height: 200px;
   border-radius: 100px;
+  object-fit: cover;
 }
 
 .profiles__inner__user{

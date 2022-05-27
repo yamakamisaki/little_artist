@@ -4,11 +4,11 @@ class UsersController < ApplicationController
 
   def show
     @search_user = @user.id
-    @items = @user.items.page(params[:page]).per(9)
+    @items = @user.items.page(params[:page]).per(12)
   end
 
   def favorites
-    @favorites = Favorite.where(user_id: @user.id).all.page(params[:page]).per(9)
+    @favorites = Favorite.where(user_id: @user.id).all.page(params[:page]).per(12)
   end
 
   private

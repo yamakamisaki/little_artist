@@ -1,10 +1,7 @@
-<%= form_with model: [@item,@comment] do |f| %>
-
+<%= form_with model: [@item,@comment] , class: :comment__form do |f| %>
     <%= render 'shared/error_messages', model: f.object %> 
-
    <div class="comment__field">
-       <%= f.text_field :text, class: :post__comment, placeholder: 'コメントを入力する' %>
-       <br>
-       <%= f.submit "コメントする", class: :comment__btn %>
+       <%= f.text_field :text, class: :post__comment %>
+       <%= f.submit "送信", class: :comment__btn %>
    </div>
 <% end %>

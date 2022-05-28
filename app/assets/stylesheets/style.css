@@ -1,4 +1,5 @@
-/* リセットCSS */
+/* リセットCSS
+---------------------------------------------- */
 * {
   box-sizing: border-box;
 }
@@ -34,8 +35,8 @@ a {
   color: #3b4043;
 }
 
-
-/* 共通 */
+/* 共通の部分
+---------------------------------------------- */
 
 body{
   width: 100%;
@@ -47,7 +48,88 @@ body{
   font-weight: bold;
 }
 
-/* ヘッダー */
+.topver{
+ width: 100%;
+ height: 85px;
+ background-color: #C0E4F2;
+ display: flex;
+ justify-content : center ;
+ align-items : center ;
+}
+
+.topver-search{
+  width: 60%;
+  height: 50px;
+}
+
+.search__forms{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 0;
+ }
+
+ .search__form{
+  width: 60%;
+  height: 40px;
+  color: #565656;
+  background-color: #FFFCD6;
+  border-radius: 50px;
+  border: none;
+  margin: auto 3px auto auto;
+}
+
+.search__form::placeholder{
+  color: #b5b3b3;
+  text-align: center;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+}
+
+.search__submit{
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  line-height: 100%;
+  border: none;
+  border-radius: 50px;
+  background-color: #84b8eb;
+  color: #FFF;
+  margin: auto;
+}
+
+.search__submit:hover{
+  background-color: #529ae2;
+}
+
+.search__radiobtn{
+  font-size: 12px;
+  background-color: #FFF;
+  border: none;
+  padding: 6px;
+  border-radius: 50px ;
+  margin-right: 3px;
+}
+
+.main{
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background-color: #E9F9FF;
+  display: flex;
+  justify-content : center ;
+  align-items : center ; 
+}
+
+.main-contents{
+  width: 90%;
+  height: 90%;
+  background-color: #FFF;
+  border-radius: 15px;
+}
+
+/* ヘッダー
+---------------------------------------------- */
 
 .header{
   width: 100%;
@@ -139,7 +221,8 @@ body{
   display: none;
 }
 
-/* フッター */
+/* フッター
+---------------------------------------------- */
 
 .footer {
   height: 40px;
@@ -154,90 +237,8 @@ body{
   font-size: 12px;
 }
 
-
-/* 共通の部分 */
-
-.topver{
- width: 100%;
- height: 85px;
- background-color: #C0E4F2;
- display: flex;
- justify-content : center ;
- align-items : center ;
-}
-
-.topver-search{
-  width: 60%;
-  height: 50px;
-}
-
-.search__forms{
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 0;
- }
-
- .search__form{
-  width: 60%;
-  height: 40px;
-  color: #565656;
-  background-color: #FFFCD6;
-  border-radius: 50px;
-  border: none;
-  margin: auto 3px auto auto;
-}
-
-.search__form::placeholder{
-  color: #b5b3b3;
-  text-align: center;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-}
-
-.search__submit{
-  width: 80px;
-  height: 35px;
-  text-align: center;
-  line-height: 100%;
-  border: none;
-  border-radius: 50px;
-  background-color: #84b8eb;
-  color: #FFF;
-  margin: auto;
-}
-
-.search__submit:hover{
-  background-color: #529ae2;
-}
-
-.search__radiobtn{
-  font-size: 12px;
-  background-color: #FFF;
-  border: none;
-  padding: 6px;
-  border-radius: 50px ;
-  margin-right: 3px;
-}
-
-.main{
-  width: 100%;
-  height: 100%;
-  padding: 50px 0;
-  background-color: #E9F9FF;
-  display: flex;
-  justify-content : center ;
-  align-items : center ; 
-}
-
-.main-contents{
-  width: 90%;
-  height: 90%;
-  background-color: #FFF;
-  border-radius: 15px;
-}
-
-/* パン屑リスト */
+/* パン屑リスト
+---------------------------------------------- */
 
 .page__list{
   width: 50%;
@@ -246,7 +247,8 @@ body{
   margin: 30px 0 0 40px;
 }
 
-/* 新規登録画面・ログイン */
+/* 新規登録画面・ログイン
+---------------------------------------------- */
 
 .login{
   width: 75%;
@@ -326,21 +328,11 @@ input{
   border-radius: 5px;
 }
 
-/* 編集機能でのみ使用 */
-.delete__btn{
-  width: 100%;
-  text-align: center;
-  border: none;
-  background-color: #818181;
-  color: #FFF;
-  border-radius: 5px;
-}
-
+/* 編集機能でのみ使用
+---------------------------------------------- */
 .login__attention{
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 50px;
+  width: 600px;
+  margin: 50px auto;
   font-size: 17px;
   color: #565656;
 }
@@ -350,7 +342,22 @@ input{
   margin-right: 15px;
 }
 
-/* 作品投稿機能（new） */
+.account__destroy{
+  width: 50%;
+  margin: 100px auto 120px;
+}
+
+.delete__btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: #818181;
+  color: #FFF;
+  border-radius: 5px;
+}
+
+/* 作品投稿機能（new）
+---------------------------------------------- */
 
 .new{
  width: 100%;
@@ -393,7 +400,8 @@ input{
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 
-/* トップページ（items index） */
+/* トップページ（items index）
+---------------------------------------------- */
 
 .index{
   height: 80%;
@@ -453,7 +461,7 @@ input{
   padding: 5px;
 }
 
-.item__user{
+.item__user__under{
   font-size: 18px;
   font-weight: bold;
   background-color: #84b8eb;
@@ -462,17 +470,35 @@ input{
   padding: 7px;
 }
 
-.item__user:hover{
+.item__user__under:hover{
   font-size: 17px;
   background-color: #c4c4c4;
   color: #FFF;
   border-radius: 5px;
   padding: 7px;
+}
+
+.item__user__over{
+  height: 35px;
+  line-height: 200%;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #84b8eb;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.item__user__over:hover{
+  height: 35px;
+  font-size: 14px;
+  background-color: #c4c4c4;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 4px;
 } */
-/* ここまで１列３投稿の場合 */
 
 /* １列４投稿にしたい場合はこちらを使用 */
-
 .item__wrapper{
   width: 100%;
   height: 90%;
@@ -485,7 +511,7 @@ input{
 .item{
   width: 200px;
   height: 220px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .item__img{
@@ -523,8 +549,8 @@ input{
   margin: 0 2px 0 2px;
 }
 
-.item__user{
-  font-size: 16px;
+.item__user__under{
+  font-size: 14px;
   font-weight: bold;
   background-color: #84b8eb;
   color: #FFF;
@@ -532,15 +558,37 @@ input{
   padding: 6px;
 }
 
-.item__user:hover{
-  font-size: 16px;
+.item__user__under:hover{
+  font-size: 14px;
   background-color: #c4c4c4;
   color: #FFF;
   border-radius: 5px;
   padding: 6px;
 }
 
-/* 投稿詳細ページ（show） */
+.item__user__over{
+  height: 35px;
+  line-height: 200%;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #84b8eb;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.item__user__over:hover{
+  height: 35px;
+  font-size: 14px;
+  background-color: #c4c4c4;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 4px;
+}
+/* ここまで１列３投稿の場合表示 */
+
+/* 投稿詳細ページ（show）
+---------------------------------------------- */
 
 .post{
   height: 100%;
@@ -664,10 +712,11 @@ input{
   background: #ffffff;
 }
 
-/* 投稿詳細ページのコメント・材料・作り方の枠 */
+/* 投稿詳細ページのコメント・材料・作り方の枠
+---------------------------------------------- */
 .box26 {
   width: 65%;
-  height: 220px;
+  height: auto;
   font-size: 15px;
   color: #818181;
   margin: 0 auto 60px;
@@ -721,7 +770,8 @@ input{
   color: #FFF;
 }
 
-/* コメント */
+/* コメント
+---------------------------------------------- */
 
 .comments{
   margin: 40px 80px ;
@@ -819,7 +869,8 @@ input{
   font-weight: bold;
 } 
 
-/* マイページ（users/show） */
+/* マイページ（users/show）
+---------------------------------------------- */
 
 .profile{
   border: 1px solid #FFF;
@@ -942,7 +993,8 @@ input{
   border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
 }
 
-/* ページネーション */
+/* ページネーション
+---------------------------------------------- */
 
 .item__paginate{
   width: 100%;
@@ -986,25 +1038,24 @@ input{
   padding: 10px;
 }
 
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
+/*---------------------------------
+ 以下レスポンシブデザイン
+--------------------------------- */
 
-/* タブレット対応 */
+
+/* タブレット対応
+--------------------------------- */
 @media (max-width: 1024px) {
-  .topver-search{
-    width: 350px;
-   }
-   .main-contents{
-    width: 90%;
-  }
 
-    /* 新規登録・ログイン */
+.topver-search{
+  width: 350px;
+ }
+
+.main-contents{
+  width: 90%;
+}
+
+/* 新規登録・ログイン */
   
 form{
   width: 80%;
@@ -1015,7 +1066,7 @@ form{
   width: 80%;
 } 
 
-    /* マイページ
+/* マイページ
 
 .profile__user__prof{
   border: 4px solid #953535; /*線の太さ・色*/
@@ -1028,26 +1079,27 @@ form{
 
 }
 
- /* スマホ表示 */
+ /* スマホ表示
+--------------------------------- */
 @media (max-width: 599px) {
 
 /* 新規登録・ログイン・ユーザー登録情報編集 */
-  .login{
-    width: 90%;
-  }
+.login{
+  width: 90%;
+}
   
-  .form__wrapper{
-    width: 90%;
-  }
+.form__wrapper{
+  width: 90%;
+}
   
-  .login__top{
-    width: 40%;
-  }
-  .login__attention{
-    font-size: 15px;
-  }
+.login__top{
+  width: 40%;
+}
+.login__attention{
+  font-size: 15px;
+}
 
-   /* マイページ */
+/* マイページ */
 
 /* .profile__user__prof{
   border: 4px solid #000000; /*線の太さ・色*/

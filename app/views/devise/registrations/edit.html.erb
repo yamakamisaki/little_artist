@@ -38,7 +38,7 @@
             <div class="login__attention">
                 <span>●</span>変更のために現在のパスワードをご入力ください
                 <br />
-                <span>●</span>パスワードを変更される場合は新しいパスワードをご入力ください
+                <span>●</span>パスワードを変更する場合は新しいパスワードをご入力ください
                 <br />
             </div>
 
@@ -66,14 +66,15 @@
             </div>
           <% end %>
 
-       <div class="login__attention">
-       <span>！</span>アカウントを削除する場合はこちらから
-      </div>
+       
 
-      <div class="field">
+      <div class="account__destroy">
+          <div class="login__attention">
+          <span>！</span>アカウントを削除する場合はこちらから
+          </div>
           <%= button_to "退会する", registration_path(resource_name), data: { confirm: "データが消えてしまいますが、本当によろしいですか？" }, method: :delete, class: :delete__btn %>
       </div>
-
+      
 
    </div>
   </div>

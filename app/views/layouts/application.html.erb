@@ -19,7 +19,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to "Little Artist", root_path ,class: :logo%>
+            <%= link_to (image_tag "header.png", class:"logo") , root_path %>
           </div>
           <%# ログイン時は以下を表示 %>
           <% if user_signed_in? %>

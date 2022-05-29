@@ -200,7 +200,8 @@ body{
 }
 
 .logo{
-  font-size: 30px;
+  width: 400px;
+  height: 70px;
 }
 
 .nav__btn,

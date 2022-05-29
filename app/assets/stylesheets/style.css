@@ -280,14 +280,14 @@ body{
 .copyright {
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* パン屑リスト
 ---------------------------------------------- */
 
 .page__list{
-  width: 50%;
+  width: 100%;
   color: #84b8eb;
   font-size: 20px;
   margin: 30px 0 0 40px;
@@ -649,7 +649,7 @@ input{
 }
 
 .post__contents{
-  margin: 150px 80px ;
+  margin: 100px 80px ;
 }
 
 .post__top{
@@ -658,17 +658,6 @@ input{
   justify-content : space-between ;
   margin: 0 auto;
   margin-top: 40px;
-}
-
-.post__user{
-  color: #454545;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.post__favorite{
-  color: red;
-  font-size: 30px;
 }
 
 .post__image{  
@@ -705,11 +694,8 @@ input{
 }
 
 .item__post__user:hover{
-  font-size: 20px;
   background-color:  #fffabe;
   color: #9a9a9a;
-  border-radius: 5px;
-  padding: 7px;
 }
 
 .post__item__favorite{
@@ -722,7 +708,6 @@ input{
   font-size: 25px; 
   font-weight: bold;
   padding: 5px;
-
 }
 
 .post__time{
@@ -786,7 +771,6 @@ input{
   display: flex;
   justify-content : space-between ;
   color: #84b8eb;
-  font-size: 20px;
 }
 
 .edit__btn,
@@ -1057,8 +1041,13 @@ input{
 }
 
 /* ヘッダー */
+.nav{
+  padding: 40px 20px;
+}
 
-/* パン屑リスト */
+.nav__left{
+  width: 70%; 
+}
 
 /* 新規登録・ログイン */
   
@@ -1081,6 +1070,11 @@ form{
 /* トップページ（items/index） */
 
 /* 投稿詳細ページ（items/show） */
+.box26 {
+  width: 100%;
+  margin: 0 auto 75px;
+  padding: 35px;
+}
 
 /* コメント(items/show,comments/_form,comments/_item_comment) */
 
@@ -1098,6 +1092,9 @@ form{
 
 }
 
+
+
+
  /* スマホ表示
 --------------------------------- */
 @media (max-width: 599px) {
@@ -1105,7 +1102,6 @@ form{
 /* 共通の部分 */
 
 /* ページネーション */
-
 .pagination span{
   font-size: 17px;
 }
@@ -1113,7 +1109,23 @@ form{
 
 /* ヘッダー */
 
+.nav{
+  padding: 40px 10px;
+}
+
+.nav__left{
+  width: 70%; 
+}
+
+.logo{
+  width: 400px;
+  height: 70px;
+}
+
 /* パン屑リスト */
+.page__list{
+  font-size: 18px;
+}
 
 /* 新規登録・ログイン・ユーザー登録情報編集 */
 .login{
@@ -1131,7 +1143,27 @@ form{
   font-size: 15px;
 }
 
+.form__top{
+  width: 50%;
+  font-size:  25px;
+}
+
+/* 編集機能でのみ使用 */
+.account__destroy{
+  width: 80%;
+  margin: 100px auto 120px;
+}
+
+
 /* 作品投稿機能（items/new） */
+.post__contents{
+  margin: 100px 40px ;
+}
+
+.post__top{
+  width: 350px;
+  margin-top: 30px;
+}
 
 /* トップページ（items/index） */
 
@@ -1176,6 +1208,44 @@ form{
 }
 
 /* 投稿詳細ページ（items/show） */
+.post__item__favorite{
+  font-size: 19px;
+}
+
+.post__favorite__count{
+  font-size: 19px; 
+}
+
+.item__post__user{
+  font-size: 17px;
+}
+
+.post__image{  
+  width: 350px;
+}
+
+.post__tag{
+  width: 350px;
+}
+
+.box26 {
+  width: 100%;
+  font-size: 14px;
+  margin: 0 auto 75px;
+  padding: 35px;
+}
+
+.post__manage{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.edit__btn,
+.destroy__btn,
+.comment__btn{
+  width: 150px;
+  font-size: 15px;
+}
 
 /* コメント(items/show,comments/_form,comments/_item_comment) */
 

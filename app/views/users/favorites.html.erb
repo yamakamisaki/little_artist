@@ -1,6 +1,7 @@
- <% breadcrumb :favorites %>
- <div class="topver"></div>
-  <div class="main">
+<% breadcrumb :favorites %>
+<div class="topver"></div>
+
+<div class="main">
    <div class="main-contents">
 
         <%# 以下パン屑リスト %>
@@ -11,44 +12,22 @@
 
        <div class="form__top">
           <p>お気に入りの作品</p>
-        </div>
-        <br><br><br>
+       </div><br><br><br>
+        
 
-     <div class="item__wrapper">
-
-
+       <div class="item__wrapper">
           <% if @favorites.present? %>
-            <% @favorites.each do |favorite| %>
-            <% item = favorite.item %>
-
-              <div class="item">
-                <%= link_to image_tag( item.image , class: :item__img ),  item_path(item.id) %> 
-                <div class="item__body">
-      <% if user_signed_in? %>
-            <% if current_user.favorited?(item) %>
-                    <%= link_to item_favorites_path(item), method: :delete do %>
-                      <span class="item__favorite">❤️</span>
-                      <span class="favorite__count"><%= item.favorites.count %></span>
-                    <% end %>
-              <% else %>
-                    <%= link_to item_favorites_path(item), method: :post do %>
-                        <span class="item__favorite">🤍</span>
-                        <span class="favorite__count"><%= item.favorites.count %></span>
-                    <% end %>
-              <% end %>
-        <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :item__favorite %>
-        <% end %>
-                        <%= link_to item.user.name , user_path(item.user_id), class: :item__user %>
-                </div>
-              </div>  
+              <% @favorites.each do |favorite| %>
+              <% items = favorite.item %>
+                  <%# 部分テンプレートでフォームを表示する %>
+                  <%= render partial: "items/items", locals: { items: items } %>
               <% end %>
           <% end %>
-      </div>  
+       </div>  
 
-         <div class="item__paginate">
+       <div class="item__paginate">
           <%= paginate @favorites %>
-        </div>
+       </div>
 
    </div> 
 </div> 

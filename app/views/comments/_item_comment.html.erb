@@ -1,33 +1,39 @@
 <% if @item.comments.present? %>
     <% @comments.each do |comment| %>
-        <li class="comments_list">
-              <div class="comment__profile">
-                <div class="comment_img">
-                  <% if comment.user.image?%>
-                      <%= image_tag comment.user.image.url  , class: :comment_img %>
-                  <% else %>
-                      <%= image_tag "/assets/default.png", class: :comment_img %>
-                  <% end %>
-                </div>
+      <li class="comments_list">
+          <div class="comment__profile">
+
+            <div class="comment_img">
+                <% if comment.user.image?%>
+                   <%= image_tag comment.user.image.url  , class: :comment_img %>
+                <% else %>
+                   <%= image_tag "/assets/default.png", class: :comment_img %>
+                <% end %>
+            </div>
               
-                <div class="comment_text">
-               <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
-               <br>
+            <div class="comment_text">
+                <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
+                <br>
                 <%= comment.text %>
               
-              <div class="destroy">
-              <% if user_signed_in? && ( current_user.id ==  @item.user_id || current_user.id == comment.user.id ) %>
-                <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn, remote: true %>                
-              <% end %>
-              </div>
-          </div>
+                <div class="destroy">
+
+                <%# コメント投稿者本人の場合は削除できる %>
+                   <% if user_signed_in? && ( current_user.id ==  @item.user_id || current_user.id == comment.user.id ) %>
+                     <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn, remote: true %>                
+                   <% end %>
+                <%# /コメント投稿者本人の場合は削除できる %>
+
+                </div>
+            </div>
+            
         </div>          
-       </li>
-     <% end %>
+      </li>
+    <% end %>
 
 <% else %> 
-      <div class="comment__none">
-          コメントはありません
-      </div>
+    <div class="comment__none">
+      コメントはありません
+    </div>
 <% end %>
         

@@ -1,7 +1,7 @@
 <% breadcrumb :items %>
- <div class="topver"></div>
+<div class="topver"></div>
 
- <div class="main post">
+<div class="main post">
   <div class="main-contents posts">
     <div class="post__wrapper">
 
@@ -11,96 +11,105 @@
         </div>
         <%# /パン屑リスト %>
 
-      <div class="form__top">
-       さ く ひ ん
-      </div>
+        <div class="form__top">
+           さ く ひ ん
+        </div>
 
-      <div class="post__contents">
-        <div class="post__image">
-         <%= image_tag @item.image %>
-         </div>
+        <div class="post__contents">
+        
+            <%= image_tag @item.image, class: "post__image" %>
 
-      <div class="post__top">
-      <% if user_signed_in? %>
-                <% if current_user.favorited?(@item) %>
-                      <%= link_to item_favorites_path(@item), method: :delete do %>
-                        <span class="post__item__favorite">❤️</span>
-                        <span class="post__favorite__count"><%= @item.favorites.count %></span>
+            <div class="post__top">
+
+              <%# ログインの有無でお気に入り機能の動作を変える %> 
+              <% if user_signed_in? %>
+                    <%# お気に入りの有無でお気に入り機能の表示を変える %>
+                      <% if current_user.favorited?(@item) %>
+                          <%= link_to item_favorites_path(@item), method: :delete do %>
+                                <span class="post__item__favorite">❤️</span>
+                                <span class="post__favorite__count"><%= @item.favorites.count %></span>
+                          <% end %>
+                      <% else %>
+                            <%= link_to item_favorites_path(@item), method: :post do %>
+                                <span class="post__item__favorite">🤍</span>
+                                <span class="post__favorite__count"><%= @item.favorites.count %></span>
+                            <% end %>
                       <% end %>
-                  <% else %>
-                    <%= link_to item_favorites_path(@item), method: :post do %>
-                        <span class="post__item__favorite">🤍</span>
-                        <span class="post__favorite__count"><%= @item.favorites.count %></span>
-                    <% end %>
-                  <% end %>
-      <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :post__item__favorite%>
-      <% end %>
-        <%= link_to @item.user.name , user_path(@item.user_id), class: :item__post__user %>
-      </div>
+                      <%# お気に入りの有無でお気に入り機能の表示を変える %>
+
+              <% else %>
+                    <%=link_to '🤍', new_user_session_path, class: :post__item__favorite%>
+              <% end %>
+              <%# /ログインの有無でお気に入り機能の動作を変える %> 
+              
+              <%= link_to @item.user.name , user_path(@item.user_id), class: :item__post__user %>
+          </div>
+          
+          <div class="post__tag">
+              <div class="center">
+                <div class="test">
+                    <%= @item.age %>さい　
+                </div>
+              </div>
+            </div>
+
+            <div class="box26">
+                <%= image_tag "comment.png", class:"box-title" %>
+                <div class="post__time">
+                  <p>投稿日時　</p><%= @item.created_at.strftime('%Y/%m/%d %H:%M') %>
+                </div>
+                <p><%= simple_format(@item.text) %></p>
+            </div>
+
+            <% if @item.material? %>
+                <div class="box26">
+                    <%= image_tag "material.png", class:"box-title" %>
+                    <div class="post__time"><p>　</p></div>
+                    <p><%= simple_format(@item.material) %></p>
+                </div>
+            <% end %>
+
+            <% if @item.making? %>
+                <div class="box26">
+                    <%= image_tag "making.png", class:"box-title" %>
+                    <div class="post__time"><p>　</p></div>
+                    <p><%= simple_format(@item.making) %></p>
+                </div>
+            <% end %>
+
+            <%# 投稿者本人の場合は表示する %>
+            <% if user_signed_in? && current_user.id == @item.user_id %>
+                <div class="post__manage">
+                    <%= link_to "編集する", edit_item_path(@item), class: :edit__btn %>
+                    <%= link_to "削除する", item_path(@item), method: :delete ,class: :destroy__btn, data: {confirm: "本当に削除しますか？"}  %>
+                </div>
+            <% end %>
+            <%# /投稿者本人の場合は表示する %>
       
-      <div class="post__tag">
-        <div class="center">
-        <div class="test">
-              <%= @item.age %>さい　
-         </div>
-        </div>
-      </div>
-
-       <div class="box26">
-          <%= image_tag "comment.png", class:"box-title" %>
-             <div class="post__time">
-               <p>投稿日時　</p><%= @item.created_at.strftime('%Y/%m/%d %H:%M') %>
-             </div>
-            <p><%= simple_format(@item.text) %></p>
-        </div>
-
-      <% if @item.material? %>
-        <div class="box26">
-          <%= image_tag "material.png", class:"box-title" %>
-              <div class="post__time"><p>　</p></div>
-              <p><%= simple_format(@item.material) %></p>
-       </div>
-      <% end %>
-
-      <% if @item.making? %>
-       <div class="box26">
-          <%= image_tag "making.png", class:"box-title" %>
-              <div class="post__time"><p>　</p></div>
-              <p><%= simple_format(@item.making) %></p>
-        </div>
-     <% end %>
-
-      <%# 投稿者とログインしているユーザーが同じであれば以下を表示 %>
-      <% if user_signed_in? && current_user.id == @item.user_id %>
-        <div class="post__manage">
-          <%= link_to "編集する", edit_item_path(@item), class: :edit__btn %>
-          <%= link_to "削除する", item_path(@item), method: :delete ,class: :destroy__btn, data: {confirm: "本当に削除しますか？"}  %>
-        </div>
-      <% end %>
-      <%# // 投稿者とログインしているユーザーが同じであれば表示 %>
-      
-    </div>
+     </div>
     
+    <%# 以下コメント関連 %>
      <div class="comments">
-        <%= image_tag "comments.png", class:"comment-header" %>
+        <%= image_tag "comments.png", class:"comment__pc" %>
+        <%= image_tag "comments_responsive.png", class:"comment__mobile" %>
       </div>
       
      <div class="comments">
         <ul class="comments_lists">
-        <div id="comments_area"> 
-          <%= render 'comments/item_comment', item: @item, comment: @comment %>
-        </div>
-      </ul>
-    </div>
+            <div id="comments_area"> 
+                <%= render 'comments/item_comment', item: @item, comment: @comment %>
+            </div>
+        </ul>
+     </div>
 
 
-  <div class="comments">
-    <div class="comments__contents">
+     <div class="comments">
+       <div class="comments__contents">
 
-        <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+        <%# ログインの有無でコメント投稿フォームの表示を変える %>
         <% if user_signed_in? %>
-              <%= image_tag "comment_post.png", class:"comment-header" %>
+              <%= image_tag "comment_post.png", class:"comment__pc" %>
+              <%= image_tag "comment_post_responsive.png", class:"comment__mobile" %>
 
             <div class="new-comment">
               <%= render 'comments/form', item: @item, comment: @comment %>
@@ -109,10 +118,10 @@
         <% else %>
             <div class="comment__var"></div>
         <% end %>
-        <%# // ログインしているユーザーには上記を表示する %>
-      </div>
+        <%# /ログインの有無でコメント投稿フォームの表示を変える %>
 
-   </div>
+       </div>
+     </div>
 
   </div>
  </div>

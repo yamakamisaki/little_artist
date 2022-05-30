@@ -1,6 +1,6 @@
 <%= form_with model: [@item,@comment] , class: :comment__form do |f| %>
     <%= render 'shared/error_messages', model: f.object %> 
-   <div class="comment__field">
+    <div class="comment__field">
        <%= f.text_area :text, class: :post__comment %>
        <%= f.submit "送信", class: :comment__btn %>
    </div>

@@ -822,7 +822,8 @@ input{
 
 .post__comment{
   width: 100%;
-  height: 150px;
+  height: 130px;
+  font-size: 17px;
   border: 2px solid #aaaaaa;
   border-radius: 5px;
 }
@@ -900,11 +901,9 @@ input{
 ---------------------------------------------- */
 
 .profile{
-  border: 1px solid #FFF;
-  
   width: 50%;
   height: 50px;
-  border-radius: 10px;
+  border: none;
 }
 
 .profile p{
@@ -920,7 +919,7 @@ input{
   border-radius: 20px;
   box-shadow: 8px 8px 2px 1px #dcd4ff;
   margin: auto;
-  margin-top: 90px;
+  margin-top: 30px;
   margin-bottom: 150px;
 }
 
@@ -955,13 +954,13 @@ input{
 }
 
 .profile__user__names{
-  width: 50%;
+  width: 70%;
   height: 40px;
   margin: auto;
 }
 
 .profile__user__name{
-  font-size: 25px;
+  font-size: 24px;
   font-weight: bold;
   color: #565656;
   text-align: center;
@@ -972,7 +971,7 @@ input{
 
 .profile__user__follows{
   width: 100%;
-  height: 30px;
+  height: 40px;
   font-size: 20px;
   display: flex;
   justify-content: space-around;
@@ -999,7 +998,6 @@ input{
 .profile__favorite:hover{
   margin: 4px 1px 8px 0;
   box-shadow: 4px 8px 0 0 #FFF;
-
 }
 
 .profile__user__profile{
@@ -1031,11 +1029,6 @@ input{
 
 /* 共通の部分 */
 
-/*　　　↓消す　　　　*/
-.topver-search{
-  width: 35px;
- }
-
 .main-contents{
   width: 90%;
 }
@@ -1058,16 +1051,17 @@ form{
 .form__btn,
 .delete__btn{
   width: 80%;
-} 
+}
 
-/* 作品投稿機能（items/new） */
+.form__top{
+  width: 40%;
+}
 
+/* トップページ（items/index） */
 .item__wrapper{
   gap: 10px;
   grid-template-columns: repeat(3,minmax(200px , 1fr));
 }
-
-/* トップページ（items/index） */
 
 /* 投稿詳細ページ（items/show） */
 .box26 {
@@ -1076,19 +1070,26 @@ form{
   padding: 35px;
 }
 
-/* コメント(items/show,comments/_form,comments/_item_comment) */
-
-
 /* マイページ（users/show）*/
 
-/*.profile__user__prof{
-  border: 4px solid #953535; /*線の太さ・色*/
-/* }
-
-.profile__main{  
-  width: 85%;
+.profile__main{
+  width: 90%;
   height: 500px;
-} */ 
+  margin-bottom: 100px;
+}
+
+.profile__inner{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.profile__user__profile{
+  height: 260px;
+}
+
+.profile__user__prof{
+  height: 260px;
+}
 
 }
 
@@ -1139,6 +1140,7 @@ form{
 .login__top{
   width: 40%;
 }
+
 .login__attention{
   font-size: 15px;
 }
@@ -1153,7 +1155,6 @@ form{
   width: 80%;
   margin: 100px auto 120px;
 }
-
 
 /* 作品投稿機能（items/new） */
 .post__contents{
@@ -1236,29 +1237,107 @@ form{
 }
 
 .post__manage{
-  width: 400px;
-  margin: 0 auto;
+  width: 300px;
+  margin: 0 auto 0;
 }
 
 .edit__btn,
 .destroy__btn,
 .comment__btn{
-  width: 150px;
+  width: 120px;
   font-size: 15px;
 }
 
+.edit__btn{
+  margin-right: 10px;
+}
+
 /* コメント(items/show,comments/_form,comments/_item_comment) */
+.comments{
+  margin: 40px 30px ;
+}
+
+.post__comment{
+  height: 110px;
+}
+
+.comments__contents{
+  width: 500px;
+}
+
+.comment__text{
+ font-size: 17px;
+}
+
+.comment__btn{
+  margin-top: 20px;
+}
+
+.comment-header{
+  width: 500px;
+  height: 60px;
+}
+
+.comment_img{
+  margin-right: 8px;
+}
+
+.comment_text{
+  width: 300px;
+  font-size: 15px;
+}
+
+.comment__none{
+  font-size: 15px;
+} 
 
 /* マイページ（users/show） */
+.profile p{
+  font-size: 25px;
+}
 
-/* .profile__user__prof{
-  border: 4px solid #000000; /*線の太さ・色*/
-/* }
+.profile__main{
+  border: 7px solid #84ceeb;
+  height: 420px;
+  margin-bottom: 80px;
+}
 
 .profile__inner{
-  width: 95%;
-  height: 80%;
-  display: block;
-} */ 
+  height: 90%;
+  margin-top: 20px;
+}
+
+.profile__user__image{
+  width: 28%;
+  margin-right: 13px;
+}
+
+.profile__user__img{
+  width: 100px;
+  height: 100px;
+}
+
+.profile__user__names{
+  width: 80%;
+}
+
+.profile__user__name{
+  font-size: 19px;
+}
+
+.profile__user__follows{
+  font-size: 17px;
+  margin: 20px 0 10px;
+}
+
+.profile__user__profile{
+  height: 240px;
+  margin-top: 20px;
+}
+
+.profile__user__prof{
+  font-size: 14px;
+  height: 240px;
+}
 
 }

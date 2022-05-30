@@ -1,16 +1,16 @@
 <% if @item.comments.present? %>
     <% @comments.each do |comment| %>
-        <li class="comments_list">
-              <div class="comment__profile">
-                <div class="comment_img">
+      <li class="comments_list">
+          <div class="comment__profile">
+            <div class="comment_img">
                   <% if comment.user.image?%>
                       <%= image_tag comment.user.image.url  , class: :comment_img %>
                   <% else %>
                       <%= image_tag "/assets/default.png", class: :comment_img %>
                   <% end %>
-                </div>
+            </div>
               
-                <div class="comment_text">
+            <div class="comment_text">
                <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
                <br>
                 <%= comment.text %>
@@ -20,10 +20,10 @@
                 <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn, remote: true %>                
               <% end %>
               </div>
-          </div>
+            </div>
         </div>          
-       </li>
-     <% end %>
+      </li>
+    <% end %>
 
 <% else %> 
       <div class="comment__none">

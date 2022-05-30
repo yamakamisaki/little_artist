@@ -677,6 +677,7 @@ input{
 .post__image{  
   width: 500px;
   height: auto;
+  display: block;
   margin: 0 auto 50px;
   border-radius: 10px;
   box-shadow: 8px 8px 2px 1px #f5f5f5;

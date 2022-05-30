@@ -9,6 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("../nav")
 require('jquery')
+require('../comment')
 require('../../../app/views/comments/item_comments')
 
 

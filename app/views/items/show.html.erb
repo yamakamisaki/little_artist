@@ -52,14 +52,14 @@
              <div class="post__time">
                <p>投稿日時　</p><%= @item.created_at.strftime('%Y/%m/%d %H:%M') %>
              </div>
-            <p><%= @item.text %></p>
+            <p><%= simple_format(@item.text) %></p>
         </div>
 
       <% if @item.material? %>
         <div class="box26">
           <%= image_tag "material.png", class:"box-title" %>
               <div class="post__time"><p>　</p></div>
-              <p><%= @item.material %></p>
+              <p><%= simple_format(@item.material) %></p>
        </div>
       <% end %>
 
@@ -67,7 +67,7 @@
        <div class="box26">
           <%= image_tag "making.png", class:"box-title" %>
               <div class="post__time"><p>　</p></div>
-              <p><%= @item.making %></p>
+              <p><%= simple_format(@item.making) %></p>
         </div>
      <% end %>
 

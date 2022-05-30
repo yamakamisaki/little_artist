@@ -81,6 +81,7 @@ body{
 }
 
 .search__form::placeholder{
+  font-size: 14px;
   color: #b5b3b3;
   text-align: center;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
@@ -128,6 +129,50 @@ body{
   border-radius: 15px;
 }
 
+/* ページネーション*/
+.item__paginate{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.pagination{
+  text-align: center;
+  display: flex;
+  justify-content: center; 
+}
+
+.pagination span{
+  text-align: center;
+  width: 50px;
+  font-size: 20px;
+}
+
+.pagination a{
+  color: #818181;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.pagination a:hover{
+  width: 50px;
+  height: 50px;
+  background-color: #84b8eb;
+  color: #FFF;
+  border-radius: 100%;
+  padding: 10px;
+}
+
+.current{
+  font-weight: bold;
+  color: #84b8eb;
+  padding: 10px;
+}
+
+
 /* ヘッダー
 ---------------------------------------------- */
 
@@ -155,7 +200,8 @@ body{
 }
 
 .logo{
-  font-size: 30px;
+  width: 400px;
+  height: 70px;
 }
 
 .nav__btn,
@@ -234,20 +280,20 @@ body{
 .copyright {
   text-align: center;
   color: #fff;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 /* パン屑リスト
 ---------------------------------------------- */
 
 .page__list{
-  width: 50%;
+  width: 100%;
   color: #84b8eb;
   font-size: 20px;
   margin: 30px 0 0 40px;
 }
 
-/* 新規登録画面・ログイン
+/* 新規登録・ログイン・ユーザー情報編集
 ---------------------------------------------- */
 
 .login{
@@ -328,8 +374,7 @@ input{
   border-radius: 5px;
 }
 
-/* 編集機能でのみ使用
----------------------------------------------- */
+/* 編集機能でのみ使用 */
 .login__attention{
   width: 600px;
   margin: 50px auto;
@@ -356,7 +401,7 @@ input{
   border-radius: 5px;
 }
 
-/* 作品投稿機能（new）
+/* 作品投稿機能（items/new）
 ---------------------------------------------- */
 
 .new{
@@ -400,7 +445,7 @@ input{
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
 }
 
-/* トップページ（items index）
+/* トップページ（items/index）
 ---------------------------------------------- */
 
 .index{
@@ -434,7 +479,6 @@ input{
   object-fit: cover;
 }
 
-
 .item__img:hover{
   width: 290px;
   height: 290px;
@@ -451,7 +495,6 @@ input{
 
 .item__favorite{
   font-size: 25px;
-  margin-right: 5px;
   padding: 5px;
 }
 
@@ -587,7 +630,7 @@ input{
 }
 /* ここまで１列３投稿の場合表示 */
 
-/* 投稿詳細ページ（show）
+/* 投稿詳細ページ（items/show）
 ---------------------------------------------- */
 
 .post{
@@ -606,7 +649,7 @@ input{
 }
 
 .post__contents{
-  margin: 150px 80px ;
+  margin: 100px 80px ;
 }
 
 .post__top{
@@ -615,17 +658,6 @@ input{
   justify-content : space-between ;
   margin: 0 auto;
   margin-top: 40px;
-}
-
-.post__user{
-  color: #454545;
-  font-size: 20px;
-  margin-right: 20px;
-}
-
-.post__favorite{
-  color: red;
-  font-size: 30px;
 }
 
 .post__image{  
@@ -662,11 +694,8 @@ input{
 }
 
 .item__post__user:hover{
-  font-size: 20px;
   background-color:  #fffabe;
   color: #9a9a9a;
-  border-radius: 5px;
-  padding: 7px;
 }
 
 .post__item__favorite{
@@ -679,7 +708,6 @@ input{
   font-size: 25px; 
   font-weight: bold;
   padding: 5px;
-
 }
 
 .post__time{
@@ -743,7 +771,6 @@ input{
   display: flex;
   justify-content : space-between ;
   color: #84b8eb;
-  font-size: 20px;
 }
 
 .edit__btn,
@@ -770,7 +797,7 @@ input{
   color: #FFF;
 }
 
-/* コメント
+/* コメント(items/show,comments/_form,comments/_item_comment)
 ---------------------------------------------- */
 
 .comments{
@@ -993,51 +1020,6 @@ input{
   border-radius: 3em .8em 3em .7em/.9em 2em .8em 3em;
 }
 
-/* ページネーション
----------------------------------------------- */
-
-.item__paginate{
-  width: 100%;
-  margin: auto;
-  margin-bottom: 40px;
-}
-
-.pagination{
-  text-align: center;
-  display: flex;
-  justify-content: center; 
-}
-
-.pagination span{
-  text-align: center;
-  width: 50px;
-  font-size: 20px;
-}
-
-.pagination a{
-  color: #818181;
-  display: block;
-  width: 100%;
-  height: 100%;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.pagination a:hover{
-  width: 50px;
-  height: 50px;
-  background-color: #84b8eb;
-  color: #FFF;
-  border-radius: 100%;
-  padding: 10px;
-}
-
-.current{
-  font-weight: bold;
-  color: #84b8eb;
-  padding: 10px;
-}
-
 /*---------------------------------
  以下レスポンシブデザイン
 --------------------------------- */
@@ -1047,12 +1029,24 @@ input{
 --------------------------------- */
 @media (max-width: 1024px) {
 
+/* 共通の部分 */
+
+/*　　　↓消す　　　　*/
 .topver-search{
-  width: 350px;
+  width: 35px;
  }
 
 .main-contents{
   width: 90%;
+}
+
+/* ヘッダー */
+.nav{
+  padding: 40px 20px;
+}
+
+.nav__left{
+  width: 70%; 
 }
 
 /* 新規登録・ログイン */
@@ -1066,9 +1060,28 @@ form{
   width: 80%;
 } 
 
-/* マイページ
+/* 作品投稿機能（items/new） */
 
-.profile__user__prof{
+.item__wrapper{
+  gap: 10px;
+  grid-template-columns: repeat(3,minmax(200px , 1fr));
+}
+
+/* トップページ（items/index） */
+
+/* 投稿詳細ページ（items/show） */
+.box26 {
+  width: 100%;
+  margin: 0 auto 75px;
+  padding: 35px;
+}
+
+/* コメント(items/show,comments/_form,comments/_item_comment) */
+
+
+/* マイページ（users/show）*/
+
+/*.profile__user__prof{
   border: 4px solid #953535; /*線の太さ・色*/
 /* }
 
@@ -1079,9 +1092,40 @@ form{
 
 }
 
+
+
+
  /* スマホ表示
 --------------------------------- */
 @media (max-width: 599px) {
+
+/* 共通の部分 */
+
+/* ページネーション */
+.pagination span{
+  font-size: 17px;
+}
+
+
+/* ヘッダー */
+
+.nav{
+  padding: 40px 10px;
+}
+
+.nav__left{
+  width: 70%; 
+}
+
+.logo{
+  width: 400px;
+  height: 70px;
+}
+
+/* パン屑リスト */
+.page__list{
+  font-size: 18px;
+}
 
 /* 新規登録・ログイン・ユーザー登録情報編集 */
 .login{
@@ -1099,7 +1143,113 @@ form{
   font-size: 15px;
 }
 
-/* マイページ */
+.form__top{
+  width: 50%;
+  font-size:  25px;
+}
+
+/* 編集機能でのみ使用 */
+.account__destroy{
+  width: 80%;
+  margin: 100px auto 120px;
+}
+
+
+/* 作品投稿機能（items/new） */
+.post__contents{
+  margin: 100px 40px ;
+}
+
+.post__top{
+  width: 350px;
+  margin-top: 30px;
+}
+
+/* トップページ（items/index） */
+
+.item__wrapper{
+  gap: 0px;
+  grid-template-columns: repeat(2,minmax(160px , 1fr));
+}
+
+.item{
+  width: 160px;
+  height: 170px;
+}
+
+.item__img{
+  width: 160px;
+  height: 160px;
+  box-shadow: 4px 4px 1px 1px  #f5f5f5;
+}
+
+.item__img:hover{
+  width: 150px;
+  height: 150px;
+  box-shadow: 4px 4px 1px 1px #C0E4F2;
+} 
+
+.item__favorite{
+  font-size: 14px;
+  padding: 5px;
+}
+
+.favorite__count{
+  font-size: 14px; 
+}
+
+.item__user__over{
+  line-height: 250%;
+  font-size: 10px;
+}
+
+.item__user__over:hover{
+  font-size: 10px;
+}
+
+/* 投稿詳細ページ（items/show） */
+.post__item__favorite{
+  font-size: 19px;
+}
+
+.post__favorite__count{
+  font-size: 19px; 
+}
+
+.item__post__user{
+  font-size: 17px;
+}
+
+.post__image{  
+  width: 350px;
+}
+
+.post__tag{
+  width: 350px;
+}
+
+.box26 {
+  width: 100%;
+  font-size: 14px;
+  margin: 0 auto 75px;
+  padding: 35px;
+}
+
+.post__manage{
+  width: 400px;
+  margin: 0 auto;
+}
+
+.edit__btn,
+.destroy__btn,
+.comment__btn{
+  width: 150px;
+  font-size: 15px;
+}
+
+/* コメント(items/show,comments/_form,comments/_item_comment) */
+
+/* マイページ（users/show） */
 
 /* .profile__user__prof{
   border: 4px solid #000000; /*線の太さ・色*/
@@ -1111,10 +1261,4 @@ form{
   display: block;
 } */ 
 
-/* ページネーション */
-.pagination span{
-  font-size: 17px;
-}
-
-  
 }

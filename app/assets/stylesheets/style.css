@@ -208,9 +208,14 @@ body{
   width: 50%; 
 }
 
-.logo{
+.logo__pc{
   width: 400px;
   height: 70px;
+  display: block;
+}
+
+.logo__mobile{
+   display: none;
 }
 
 .nav__btn,
@@ -851,11 +856,16 @@ input{
   background-color: #FFFCD6;
 }
 
-.comment-header{
+.comment__pc{
   width: 700px;
   height: 80px;
   border-radius: 5px;
   margin: 50px 0;
+  display: block;
+}
+
+.comment__mobile{
+  display: none;
 }
 
 .comment__var{
@@ -1139,9 +1149,14 @@ form{
   width: 70%; 
 }
 
-.logo{
-  width: 400px;
+.logo__mobile{
+  width: 300px;
   height: 70px;
+  display: block;
+}
+
+.logo__pc{
+  display: none;
 }
 
 /* パン屑リスト */
@@ -1294,9 +1309,15 @@ form{
   margin-top: 20px;
 }
 
-.comment-header{
+.comment__mobile{
+  display: block;
   width: 500px;
-  height: 60px;
+  height: 85px;
+  border-radius: 5px;
+}
+
+.comment__pc{
+  display: none;
 }
 
 .comment_img{

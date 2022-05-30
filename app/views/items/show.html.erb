@@ -83,7 +83,8 @@
     </div>
     
      <div class="comments">
-        <%= image_tag "comments.png", class:"comment-header" %>
+        <%= image_tag "comments.png", class:"comment__pc" %>
+        <%= image_tag "comments_responsive.png", class:"comment__mobile" %>
       </div>
       
      <div class="comments">
@@ -100,7 +101,8 @@
 
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-              <%= image_tag "comment_post.png", class:"comment-header" %>
+              <%= image_tag "comment_post.png", class:"comment__pc" %>
+              <%= image_tag "comment_post_responsive.png", class:"comment__mobile" %>
 
             <div class="new-comment">
               <%= render 'comments/form', item: @item, comment: @comment %>

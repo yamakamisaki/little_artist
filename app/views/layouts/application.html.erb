@@ -8,9 +8,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%# <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
-     %>
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
 
   <body>
@@ -19,7 +17,8 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to (image_tag "header.png", class:"logo") , root_path %>
+            <%= link_to (image_tag "logo.png", class:"logo__pc") , root_path %>
+             <%= link_to (image_tag "logo_responsive.png", class:"logo__mobile") , root_path %>
           </div>
           <%# ログイン時は以下を表示 %>
           <% if user_signed_in? %>

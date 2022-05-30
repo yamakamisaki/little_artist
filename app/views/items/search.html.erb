@@ -5,39 +5,15 @@
 <div class="main">
   <div class="main-contents index">
 
-  <div class="item__wrapper">
-
-  <% @search_item.each do |items| %>
-
-    <div class="item">
-      <%= link_to image_tag( items.image , class: :item__img ),  item_path(items.id)%> 
-      <div class="item__body">
-      <% if user_signed_in? %>
-              <% if current_user.favorited?(items) %>
-                        <%= link_to item_favorites_path(items), method: :delete do %>
-                          <span class="item__favorite">❤️</span>
-                          <span class="favorite__count"><%= items.favorites.count %></span>
-                        <% end %>
-              <% else %>
-                      <%= link_to item_favorites_path(items), method: :post do %>
-                          <span class="item__favorite">🤍</span>
-                          <span class="favorite__count"><%= items.favorites.count %></span>
-                      <% end %>
-              <% end %>
-        <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :item__favorite%>
-        <% end %>
-        <%= link_to items.user.name , user_path(items.user_id), class: :item__user %>
-      </div>
-    </div>  
-
-  <% end %>
-
-  </div>
-
-          <div class="item__paginate">
-          <%= paginate @search_item %>
+        <div class="item__wrapper">
+            <% @search_item.each do |items| %>
+                <%# 部分テンプレートでフォームを表示する %>
+                <%= render partial: "items", locals: { items: items } %>
+            <% end %>
         </div>
 
- </div>
+       <div class="item__paginate">
+          <%= paginate @search_item %>
+       </div>
+  </div>
 </div>

@@ -1,53 +1,19 @@
-
-
 <div class="topver">
    <%= render partial: "searchver" %> 
 </div>
 
 <div class="main">
   <div class="main-contents index">
+    <div class="item__wrapper">
 
-  <div class="item__wrapper">
+       <% @items.each do |items| %>
+          <%# 部分テンプレートでフォームを表示する %>
+          <%= render partial: "items", locals: { items: items } %>
+       <% end %>
 
-  <% @items.each do |items| %>
-
-    <div class="item">
-      <%= link_to image_tag( items.image , class: :item__img ),  item_path(items.id)%> 
-      <div class="item__body">       
-
-      <% if user_signed_in? %>
-            <% if current_user.favorited?(items) %>
-                    <%= link_to item_favorites_path(items), method: :delete do %>
-                      <span class="item__favorite">❤️</span>
-                      <span class="favorite__count"><%= items.favorites.count %></span>
-                    <% end %>
-              <% else %>
-                    <%= link_to item_favorites_path(items), method: :post do %>
-                        <span class="item__favorite">🤍</span>
-                        <span class="favorite__count"><%= items.favorites.count %></span>
-                    <% end %>
-              <% end %>
-        <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :item__favorite %>
-        <% end %>
-
-        <%# ユーザー名の文字数で表示を変える %>
-            <% if items.user.name.length <= 8  %>
-            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__under %>
-            <% else %>
-            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__over %>
-            <% end %>
-        <%# /ユーザー名の文字数で表示を変える %>
-        
-      </div>
-    </div>  
-
-  <% end %>
-  </div>
-
+     </div>
         <div class="item__paginate">
           <%= paginate @items %>
-        </div>
-        
- </div>
+        </div>     
+  </div>
 </div>

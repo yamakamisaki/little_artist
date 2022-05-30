@@ -1,0 +1,36 @@
+ <div class="item">
+      <%= link_to image_tag( items.image , class: :item__img ),  item_path(items.id)%> 
+      
+      <div class="item__body">  
+           <%# ログインの有無でお気に入り機能の動作を変える %>     
+           <% if user_signed_in? %>
+
+                <%# お気に入りの有無でお気に入り機能の表示を変える %>
+                <% if current_user.favorited?(items) %>
+                        <%= link_to item_favorites_path(items), method: :delete do %>
+                           <span class="item__favorite">❤️</span>
+                           <span class="favorite__count"><%= items.favorites.count %></span>
+                        <% end %>
+                  <% else %>
+                        <%= link_to item_favorites_path(items), method: :post do %>
+                            <span class="item__favorite">🤍</span>
+                            <span class="favorite__count"><%= items.favorites.count %></span>
+                        <% end %>
+                  <% end %>
+                  <%# /お気に入りの有無でお気に入り機能の表示を変える %>
+
+           <% else %>
+                  <%=link_to '🤍', new_user_session_path, class: :item__favorite %>
+           <% end %>
+          <%# /ログインの有無でお気に入り機能の表示を変える %>
+
+        <%# ユーザー名の文字数で表示を変える %>
+            <% if items.user.name.length <= 8  %>
+            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__under %>
+            <% else %>
+            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__over %>
+            <% end %>
+        <%# /ユーザー名の文字数で表示を変える %>
+        
+    </div>
+ </div>  

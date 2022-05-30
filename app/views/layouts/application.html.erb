@@ -16,51 +16,52 @@
   <header class="header">
       <div class="inner">
         <div class="nav">
+
           <div class="nav__left">
-            <%= link_to (image_tag "logo.png", class:"logo__pc") , root_path %>
+             <%= link_to (image_tag "logo.png", class:"logo__pc") , root_path %>
              <%= link_to (image_tag "logo_responsive.png", class:"logo__mobile") , root_path %>
           </div>
-          <%# ログイン時は以下を表示 %>
+
+          <%# ログイン時の表示 %>
           <% if user_signed_in? %>
            <div class="nav__right"> 
-                  <p class="nav__btn" id="mypage__btn">
+               <p class="nav__btn" id="mypage__btn">
                   <%= current_user.name %>
-                  </p>
+               </p>
                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: :nav__btn2 %>
-              </div>
+           </div>
               
-
-              <ul class="show-lists hidden" id="pull-down">
-                   <li class="pull-down-list">
-                      <%= link_to "マイページ", user_path(current_user) ,class: :pulldown__text %>
-                   </li>
-                   <li class="pull-down-list">
-                      <%= link_to "投稿する", new_item_path,class: :pulldown__text%>
-                   </li>
-                   <li class="pull-down-list">
-                      <%= link_to "設定", edit_user_registration_path, class: :pulldown__text %>
-                  </li>
-                </ul>
-
-           <%# /ログイン時 %>
-
-           <% else %>
-           
-           <%# 未ログイン時は以下を表示 %>
-            <div class="nav__right">
-              <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
-              <%= link_to "ログイン", new_user_session_path, class: :nav__btn2 %>
-            </div>
+           <ul class="show-lists hidden" id="pull-down">
+              
+               <li class="pull-down-list">
+                   <%= link_to "マイページ", user_path(current_user) ,class: :pulldown__text %>
+               </li>
+               <li class="pull-down-list">
+                   <%= link_to "投稿する", new_item_path,class: :pulldown__text%>
+               </li>
+               <li class="pull-down-list">
+                   <%= link_to "設定", edit_user_registration_path, class: :pulldown__text %>
+               </li>
+           </ul>
+           <%# /ログインの時 %>
+        <% else %>
+           <%# 未ログイン時の表示 %>
+           <div class="nav__right">
+                <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
+                <%= link_to "ログイン", new_user_session_path, class: :nav__btn2 %>
+           </div>
           <% end %>
-          <%# /未ログイン時 %>
+          <%# /未ログイン時の表示 %>
+          
         </div>
       </div>
-    </header>
+   </header>
 
- <% breadcrumb :root %>
+   <% breadcrumb :root %>
 
-    <%= yield %>
-        <footer class="footer">
+   <%= yield %>
+
+    <footer class="footer">
       <p class="copyright"> © Little Artist  2022 </p>
     </footer>
 

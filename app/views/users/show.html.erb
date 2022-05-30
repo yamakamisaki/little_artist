@@ -1,14 +1,13 @@
 
 <% breadcrumb :users %>
-  <div class="topver">
-
-     <div class="topver-search">
-          <%= search_form_for @q, url: search_items_path, class: :search__form__users do |f| %>
-                <%= f.text_field :text_or_age_or_material_or_making_cont, placeholder: '検索したいワードを入力', class: :search__form %>
-                <%= f.radio_button :user_id_eq, '' %><p class="search__radiobtn">全ての投稿から</p>
-                <%= f.radio_button :user_id_eq, @search_user %><p class="search__radiobtn">このページから</p>
-                <%= f.submit '検索', class: :search__submit %>
-          <% end %>
+<div class="topver">
+  <div class="topver-search">
+     <%= search_form_for @q, url: search_items_path, class: :search__form__users do |f| %>
+       <%= f.text_field :text_or_age_or_material_or_making_cont, placeholder: '検索したいワードを入力', class: :search__form %>
+       <%= f.radio_button :user_id_eq, '' %><p class="search__radiobtn">全ての投稿から</p>
+       <%= f.radio_button :user_id_eq, @search_user %><p class="search__radiobtn">このページから</p>
+       <%= f.submit '検索', class: :search__submit %>
+     <% end %>
   </div>
 </div>
 
@@ -29,12 +28,12 @@
        <div class="profile__inner">
 
           <div class="profile__user__image">
-           <div class="profile__user__img">
-            <% if @user.image?%>
-               <%= image_tag @user.image.url  , class: :profile__user__img %>
-            <% else %>
-               <%= image_tag "/assets/default.png", class: :profile__user__img  %>
-            <% end %>
+            <div class="profile__user__img">
+                <% if @user.image?%>
+                  <%= image_tag @user.image.url  , class: :profile__user__img %>
+                <% else %>
+                  <%= image_tag "/assets/default.png", class: :profile__user__img  %>
+                <% end %>
             </div>
           </div>
           
@@ -52,46 +51,21 @@
                 </div>
 
                 <div class="profile__user__profile">
-                  <div class="profile__user__prof">
-                  <%= simple_format(@user.profile) %>
-                  </div>
-              </div>
+                    <div class="profile__user__prof">
+                       <%= simple_format(@user.profile) %>
+                    </div>
+                 </div>
           </div>
 
        </div>
      </div>
 
+     <div class="item__wrapper">
+          <% @items.each do |items| %>
+          <%# 部分テンプレートでフォームを表示する %>
+          <%= render partial: "items/items", locals: { items: items } %>
+          <% end %>
+     </div>
 
-    <div class="item__wrapper">
-
-      <% @items.each do |items| %>
-
-    <div class="item">
-      <%= link_to image_tag( items.image , class: :item__img ),  item_path(items.id)%> 
-      <div class="item__body">
-      
-       <% if user_signed_in? %>
-              <% if current_user.favorited?(items) %>
-                        <%= link_to item_favorites_path(items), method: :delete do %>
-                          <span class="item__favorite">❤️</span>
-                          <span class="favorite__count"><%= items.favorites.count %></span>
-                        <% end %>
-                <% else %>
-                      <%= link_to item_favorites_path(items), method: :post do %>
-                          <span class="item__favorite">🤍</span>
-                          <span class="favorite__count"><%= items.favorites.count %></span>
-                      <% end %>
-                <% end %>
-        <% else %>
-               <%=link_to '🤍', new_user_session_path, class: :item__favorite%>
-        <% end %>
-        
-        <%= link_to items.user.name , user_path(items.user_id), class: :item__user %>
-      </div>
-    </div>  
-
-
-    <% end %>
-   </div>
   </div>
 </div>

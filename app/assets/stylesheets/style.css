@@ -1160,6 +1160,13 @@ form{
   display: none;
 }
 
+.nav__btn,
+.nav__btn2{
+ margin-right: 15px;
+ font-size: 12px;
+ padding: 7px 7px;
+}
+
 /* パン屑リスト */
 .page__list{
   font-size: 18px;

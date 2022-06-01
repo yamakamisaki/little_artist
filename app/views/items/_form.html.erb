@@ -14,7 +14,7 @@
               <%= f.label :text, "コメント"%>
               <div class="need">必須</div><br />
           </div>
-          <%= f.text_area :text, class: :form__text, id:"user_profile",
+          <%= f.text_area :text, class: :form__text, id:"item_text",
                            placeholder: "作っている時のつぶやきや表情はどんな風に見えましたか？
 １年後、５年後・・お子さんが大きくなった時にも残しておきたい成長の記録をぜひ残してください！" %>
       </div>
@@ -32,7 +32,7 @@
 
       <div class="post__field">
           <%= f.label :material, "材料"%><br />
-          <%= f.text_area :material, class: :form__text, id:"user_profile",
+          <%= f.text_area :material, class: :form__text, id:"item_material",
                                      placeholder: "例
 紙（なんでもOK）
 紙テープ、折り紙（100円ショップ）" %>
@@ -40,7 +40,7 @@
 
       <div class="post__field">
           <%= f.label :making, "作り方"%><br />
-          <%= f.text_area :making, class: :form__text, id:"user_profile",
+          <%= f.text_area :making, class: :form__text, id:"item_making",
                                    placeholder: "例
 事前準備　紙に車の絵を書いておく
 ①紙テープや折り紙をちぎる

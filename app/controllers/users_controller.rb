@@ -21,5 +21,4 @@ class UsersController < ApplicationController
     @q = Item.ransack(params[:q])
     @item = @q.result
   end
-
 end

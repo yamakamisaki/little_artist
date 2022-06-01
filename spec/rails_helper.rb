@@ -32,6 +32,9 @@ rescue ActiveRecord::PendingMigrationError => e
 end
 RSpec.configure do |config|
   config.include SignInSupport
+  config.after(:all) do
+    FileUtils.rm_rf(ActiveStorage::Blob.service.root) if Rails.env.test?
+  end
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

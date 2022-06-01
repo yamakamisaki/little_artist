@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 def basic_pass(path)
-  username = ENV['BASIC_AUTH_USER'] 
+  username = ENV['BASIC_AUTH_USER']
   password = ENV['BASIC_AUTH_PASSWORD']
   visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
 end
@@ -12,7 +12,7 @@ RSpec.describe '新規投稿', type: :system do
     @item = FactoryBot.build(:item)
   end
 
-  context '新規投稿ができるとき'do
+  context '新規投稿ができるとき' do
     it 'ログインしたユーザーは新規投稿できる' do
       # ログインする
       sign_in(@user)
@@ -25,21 +25,21 @@ RSpec.describe '新規投稿', type: :system do
       fill_in '材料', with: @item.material
       fill_in '作り方', with: @item.making
       # 送信するとItemモデルのカウントが1上がることを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Item.count }.by(1)
+      end.to change { Item.count }.by(1)
       # トップページに遷移する
       visit root_path
     end
   end
-  context '新規投稿ができないとき'do
+  context '新規投稿ができないとき' do
     it 'ログインしていないと新規投稿ページに遷移できない' do
       # トップページに遷移する
       basic_pass root_path
       # 新規投稿ページへのボタンがないことを確認する
       expect(page).to have_no_content('投稿する')
     end
-  end 
+  end
 end
 
 RSpec.describe '投稿編集', type: :system do
@@ -71,11 +71,11 @@ RSpec.describe '投稿編集', type: :system do
       fill_in 'コメント', with: "#{@item1.text}+編集したテキスト"
       fill_in 'コメント', with: "#{@item1.material}+編集したテキスト"
       fill_in 'コメント', with: "#{@item1.making}+編集したテキスト"
-      fill_in '作った年齢（半角数字）', with: "#{@item1.age}"
+      fill_in '作った年齢（半角数字）', with: @item1.age.to_s
       # 編集してもItemモデルのカウントは変わらないことを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Item.count }.by(0)
+      end.to change { Item.count }.by(0)
       # 詳細ページに遷移する
       visit item_path(@item1)
     end
@@ -88,7 +88,6 @@ RSpec.describe '投稿編集', type: :system do
       visit item_path(@item2)
       # item2に「編集する」ボタンがないことを確認する
       expect(page).to have_no_selector('.edit__btn', text: '編集する')
-
     end
     it 'ログインしていないと投稿の編集画面には遷移できない' do
       # トップページにいる
@@ -115,9 +114,9 @@ RSpec.describe '投稿削除', type: :system do
       # item1に「削除する」ボタンがあることを確認する
       expect(page).to have_selector('.destroy__btn', text: '削除する')
       # 投稿を削除するとレコードの数が1減ることを確認する
-      expect{
+      expect do
         click_on '削除する'
-      }.to change { Item.count }.by(-1)
+      end.to change { Item.count }.by(-1)
       # トップページに遷移する
       visit root_path
     end
@@ -151,7 +150,7 @@ RSpec.describe '投稿詳細', type: :system do
     # ログインする
     sign_in(@user)
     # 詳細ページに遷移する
-    visit item_path(@item)    
+    visit item_path(@item)
     # コメント用のフォームが存在する
     expect(page).to have_selector 'form'
   end

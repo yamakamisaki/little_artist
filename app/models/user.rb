@@ -18,7 +18,7 @@ class User < ApplicationRecord
 
   validates :profile, length: { maximum: 150 }
 
-  #お気に入り登録されているか確認する
+  # お気に入り登録されているか確認する
   def favorited?(item)
     favorites.exists?(item_id: item.id)
   end
@@ -35,5 +35,4 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
-
 end

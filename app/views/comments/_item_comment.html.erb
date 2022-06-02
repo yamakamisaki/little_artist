@@ -20,7 +20,7 @@
 
                 <%# コメント投稿者本人の場合は削除できる %>
                    <% if user_signed_in? && ( current_user.id ==  @item.user_id || current_user.id == comment.user.id ) %>
-                     <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn, remote: true %>                
+                     <%= link_to "削除する", item_comment_path(comment.item.id, comment.id), method: :delete ,class: :destroy__btn %>                
                    <% end %>
                 <%# /コメント投稿者本人の場合は削除できる %>
 

@@ -1039,6 +1039,291 @@ input{
 }
 
 /*---------------------------------
+ サイト説明ページ（users/index）
+--------------------------------- */
+/* 共通の部分 */
+.boxs{
+  width: 100%;
+  height: auto;
+}
+
+.boxs__inner{
+  width: 85%;
+  margin: auto;
+}
+
+.ver{
+  width: 40%;
+  height: 8px;
+  background-color: #a1c8ee;
+  margin: 100px auto;
+  border-radius: 100px;
+}
+
+.box__flex{
+  display: flex;
+  justify-content: space-around;
+  margin: 100px auto 100px;
+}
+
+.box__top_img{
+  width: 500px;
+  height: 150px;
+  margin: auto;
+}
+
+/* 個別の部分 */
+.box1{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 50px;
+}
+
+.box1__img{
+  width: 500px;
+  height: 500px;
+  margin: 20px auto 30px;
+}
+
+.box1__scroll{
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+.arrow_u{
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.box1__scroll_btm{
+  color: #aaaaaa;
+  margin-top: 20px;
+}
+
+.arrow_u:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 0;
+  border-bottom: solid 2px #9a9a9a;
+  border-right: solid 2px #9a9a9a;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -6px;
+  transform: rotate(45deg);
+}
+
+.box2{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.box2__flex{
+  display: flex;
+  justify-content: space-around;
+  margin: 80px auto 80px;
+}
+
+.box2__task_img{
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+.box3{
+  width: 100%;
+  height: auto;
+}
+
+.box3__flex__pc{
+  display: flex;
+  justify-content: space-around;
+  margin: 90px auto 80px;
+}
+
+.box3__cans{
+  width: 450px;
+  height: auto;
+}
+
+.box3__cans2{
+  width: 450px;
+  height: auto;
+}
+
+.box3__flex{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.box3__title_img{
+  width: 40px;
+  height: 40px;
+}
+
+.box3__title_text{
+  font-size: 25px;
+}
+
+.box3__can{
+  width: 450px;
+  height: 250px;
+  color: #565656;
+  font-weight: bold;
+  padding: 30px;
+  background-color: #E9F9FF;
+  border-radius: 10px;
+}
+
+.box4{
+  width: 100%;
+  height:auto;
+}
+
+.box5{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 120px;
+}
+
+.box5__img{
+  width: 1000px;
+  height: 500px;
+  margin: auto;
+}
+
+.box5__text{
+  width: 50%;
+  color: #9e9e7b;
+  text-align: center;
+  border: 3px solid #84ceeb;
+  border-radius: 100px;
+  padding: 10px;
+  margin: 0 auto 30px;
+}
+
+.box5__text span{
+  font-size: 25px;
+  color: #669fb6;
+  font-weight: bold;
+}
+
+.box6{
+  width: 100%;
+  height: auto;
+  margin-bottom: 300px;
+}
+
+.box6__flex{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin: 70px auto 250px;
+}
+
+.box6__myimg{
+  background-color: #aaaaaa;
+
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 100px;
+}
+
+.box6__profiles{
+  position: relative;
+  width: 60%;
+  height: 80px;
+  margin: auto;
+}
+
+.box6__name{
+  width: 50%;
+  height: 55px;
+  font-size: 30px;
+  color: #9a9a9a;
+  text-align: center;
+  line-height: 55px;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+
+.box6__profiles__name{
+  position: absolute;
+  top: 200px;
+  right: 30px;
+  font-size: 60px;
+  opacity: 0.2;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+.box6__profile{
+  width: 100%;
+  height: 230px;
+  border: 3px solid #dcdcdc;
+  border-radius:10px;
+  padding: 30px;
+}
+
+.box6__profile span{
+  border-bottom: 3px solid #84b8eb;
+}
+
+.box7{
+  width: 100%;
+  height: 550px;
+}
+
+.box7__img{
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.box7__btns{
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin: 60px auto 0;
+}
+
+.box7__btn1,
+.box7__btn2{
+  display: block;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 100px;
+  box-shadow: 6px 6px 0 0 #cccccc;
+}
+
+.box7__btn1{
+  background-color: #90cee9;
+}
+
+.box7__btn1:hover{
+  background-color: #818181;
+}
+
+.box7__btn2{
+  background-color: #84b8eb;
+}
+
+.box7__btn2:hover{
+  background-color: #818181;
+}
+
+/*---------------------------------
  以下レスポンシブデザイン
 --------------------------------- */
 
@@ -1046,7 +1331,7 @@ input{
 /* タブレット対応
 --------------------------------- */
 @media (max-width: 1024px) {
-
+   
 /* 共通の部分 */
 
 .main-contents{
@@ -1109,6 +1394,21 @@ form{
 
 .profile__user__prof{
   height: 260px;
+}
+
+/*  サイト説明ページ（users/index） */
+/* 　　　　　　　　　　　 消す　　　　　　　　　　　　 */
+.topver{
+  background-color: #368cae;
+ }
+
+ .box5{
+  background-color: none;
+}
+
+ .box5__img{
+  width: 800px;
+  height: 400px;
 }
 
 }
@@ -1388,6 +1688,103 @@ form{
 .profile__user__prof{
   font-size: 14px;
   height: 240px;
+}
+
+/*  サイト説明ページ（users/index） */
+
+/* 　　　　　　　　　　　 消す　　　　　　　　　　　　 */
+.topver{
+  background-color: #c510ee;
+ }
+
+ .box__top_img{
+  width: 330px;
+  height: 100px;
+}
+
+ .box1{
+  padding: 10px;
+}
+
+.box1__img{
+  width: 450px;
+  height: 450px;
+}
+
+.box2__flex{
+  display: block;
+  margin: 40px auto 100px;
+}
+
+.box2__task_img{
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+.box3__flex__pc{
+  display: block;
+}
+
+.box3__cans2{
+  margin-top: 60px;
+}
+
+.box5__text{
+  width: 85%;
+  border: 3px solid #84ceeb;
+  padding: 15px;
+  margin: 0 auto 30px;
+}
+
+.box5__text span{
+  font-size: 19px;
+}
+
+.box5__text p{
+  font-size: 14px;
+}
+
+.box5__img{
+  width: 500px;
+  height: 250px;
+}
+
+.box6__flex{
+  width: 100%;
+  display: block;
+  margin: 70px auto 250px;
+}
+
+.box6__profiles{
+  width: 100%;
+  height: 80px;
+  margin-top: 40px;
+}
+
+.box6__profile{
+  height: 300px;
+  padding: 25px;
+
+}
+
+.box6__profiles__name{
+  top: 245px;
+  right: 30px;
+}
+
+.box7{
+  margin-top: 400px;
+}
+
+.box7__img{
+  width: 250px;
+  height: 250px;
+}
+
+.box7__btns{
+  width: 100%;
+  margin: 80px auto 0;
 }
 
 }

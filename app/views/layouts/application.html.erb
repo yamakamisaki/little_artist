@@ -32,7 +32,10 @@
            </div>
               
            <ul class="show-lists hidden" id="pull-down">
-              
+           
+              <li class="pull-down-list">
+                   <%= link_to "サイトについて", users_path ,class: :pulldown__text %>
+               </li>
                <li class="pull-down-list">
                    <%= link_to "マイページ", user_path(current_user) ,class: :pulldown__text %>
                </li>
@@ -52,7 +55,7 @@
            </div>
           <% end %>
           <%# /未ログイン時の表示 %>
-          
+      <%= link_to "サイトについて", users_path ,class: :pulldown__text %>
         </div>
       </div>
    </header>

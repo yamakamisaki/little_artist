@@ -2,6 +2,10 @@ class UsersController < ApplicationController
   before_action :set_user,   only: [:show, :favorites]
   before_action :set_search, only: :show
 
+  def index
+    @items = Item.all
+  end
+
   def show
     @search_user = @user.id
     @items = @user.items.page(params[:page]).per(12)

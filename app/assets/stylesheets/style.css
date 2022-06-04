@@ -1084,11 +1084,36 @@ input{
   width: 500px;
   height: 500px;
   margin: 20px auto 30px;
+  animation: balloon 2s forwards;
+}
+
+@keyframes balloon{
+  0%{
+  opacity: 0.3;
+  transform: translateY(100px);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+  opacity: 1;
+  transform: translateY(0);
+  }
 }
 
 .box1__scroll{
   margin-bottom: 150px;
   text-align: center;
+  animation: key 1s ease infinite alternate;
+}
+
+@keyframes key {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .arrow_u{
@@ -1134,6 +1159,7 @@ input{
   width: 400px;
   height: 300px;
   margin: auto;
+  animation: balloon 6s forwards;
 }
 
 .box3{
@@ -1170,22 +1196,83 @@ input{
 
 .box3__title_text{
   font-size: 25px;
+  font-weight: bold;
 }
 
 .box3__can{
   width: 450px;
   height: 250px;
-  color: #565656;
+  font-size: 16px;
+  color: #2b6f8a;
   font-weight: bold;
   padding: 30px;
   background-color: #E9F9FF;
   border-radius: 10px;
 }
 
+.box3__can span{
+  display: block;
+  font-size: 17px;
+  background-color: #FFF;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 17px;
+}
+
 .box4{
   width: 100%;
   height:auto;
 }
+
+
+/* 
+.slider{
+  border: 1px solid #2b6f8a;
+
+  width: 80%;
+  height: 400px;
+  display: flex;
+  overflow: hidden;
+  margin: auto;
+}
+
+
+.slider img:first-child{
+  animation: slide1 60s -30s linear infinite;
+}
+
+.slider img:last-child {
+  animation: slide2 60s linear infinite;
+}
+
+@keyframes slide1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+ 
+@keyframes slide2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+} */
+ 
+.slider{
+  display: flex;
+}
+
+.slider img{
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
 
 .box5{
   width: 100%;
@@ -1305,6 +1392,7 @@ input{
   padding: 20px;
   border-radius: 100px;
   box-shadow: 6px 6px 0 0 #cccccc;
+  animation: shine 1s ease-in-out infinite;
 }
 
 .box7__btn1{
@@ -1401,6 +1489,20 @@ form{
 .topver{
   background-color: #368cae;
  }
+
+ .box3__flex__pc{
+  display: block;
+  margin: 90px auto 80px;
+}
+
+.box3__cans,
+.box3__cans2{
+  margin: auto;
+}
+
+.box3__cans2{
+  margin-top: 100px;
+}
 
  .box5{
   background-color: none;
@@ -1722,12 +1824,27 @@ form{
   margin: auto;
 }
 
-.box3__flex__pc{
-  display: block;
-}
-
 .box3__cans2{
   margin-top: 60px;
+}
+
+.box3__title_img{
+  width: 30px;
+  height: 30px;
+}
+
+.box3__title_text{
+  font-size: 22px;
+}
+
+.box3__can{
+  font-size: 15px;
+}
+
+.box3__can span{
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 17px;
 }
 
 .box5__text{
@@ -1769,7 +1886,7 @@ form{
 }
 
 .box6__profiles__name{
-  top: 245px;
+  top: 280px;
   right: 30px;
 }
 

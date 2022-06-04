@@ -79,21 +79,17 @@
           </div>
       </div>
 
-      <div class="ver"></div>
-
+      <% if @items.present? %>
       <div class="box4">
-         <div class="">
-            <h1>作品展　開催中　♪</h1>
-        </div>
+        <h1>作品展　開催中♪</h1>
+        <p>気になる作品をCheck！</p>
 
         <div class="slider">
-                <div><%= image_tag "site/box2.png" %></div>
-                <div><%= image_tag "site/box6.png" %></div>
-                <div><%= image_tag "site/box2.png" %></div>
-                <div><%= image_tag "site/box2.png" %></div>
-                <div><%= image_tag "site/box6.png" %></div>
-                <div><%= image_tag "site/box2.png" %></div>
-      </div>
+           <% @items.each do |items| %>
+             <div><%= link_to image_tag( items.image , class: :slider__img ),  item_path(items.id)%></div>
+           <% end %>
+        </div>
+      <% end %>
 
       <div class="box6">
             <div class="box__top_img">

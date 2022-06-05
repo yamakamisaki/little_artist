@@ -1365,7 +1365,7 @@ input{
 }
 
 .box6__flex{
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
   margin: 70px auto 250px;
@@ -1388,7 +1388,7 @@ input{
 }
 
 .box6__name{
-  width: 50%;
+  width: 80%;
   height: 55px;
   font-size: 30px;
   color: #9a9a9a;
@@ -1511,6 +1511,16 @@ form{
   grid-template-columns: repeat(3,minmax(200px , 1fr));
 }
 
+.slider_toppage{
+  width: 100%;
+}
+
+.toppage{
+  width: 100%;
+  margin:  0 auto;
+}
+
+
 /* 投稿詳細ページ（items/show） */
 .box26 {
   width: 100%;
@@ -1561,6 +1571,11 @@ form{
  .box5__img{
   width: 800px;
   height: 400px;
+}
+
+.box6__flex{
+  width: 100%;
+  margin: 70px auto 250px;
 }
 
 }

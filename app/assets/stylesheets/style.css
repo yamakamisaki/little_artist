@@ -1256,6 +1256,7 @@ input{
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .box3__title_img{
@@ -1264,24 +1265,27 @@ input{
 }
 
 .box3__title_text{
+  color: #4983bd;
   font-size: 25px;
-  font-weight: bold;
 }
 
 .box3__can{
   width: 450px;
-  height: 250px;
-  font-size: 16px;
+  height: auto;
+  font-size: 18px;
   color: #2b6f8a;
   font-weight: bold;
   padding: 30px;
   background-color: #E9F9FF;
   border-radius: 10px;
+  box-shadow: 7px 7px 1px 1px #bcbec1;
 }
 
 .box3__can span{
   display: block;
   font-size: 17px;
+  color: #818181;
+  font-weight: bold;
   background-color: #FFF;
   border-radius: 10px;
   padding: 5px;
@@ -1368,6 +1372,7 @@ input{
   width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 70px auto 250px;
 }
 
@@ -1383,7 +1388,7 @@ input{
 .box6__profiles{
   position: relative;
   width: 60%;
-  height: 80px;
+  height: auto;
   margin: auto;
 }
 
@@ -1398,9 +1403,9 @@ input{
   margin: 0 auto 10px;
 }
 
-.box6__profiles__name{
+.box6__profiles__who{
   position: absolute;
-  top: 200px;
+  top: 280px;
   right: 30px;
   font-size: 60px;
   opacity: 0.2;
@@ -1410,7 +1415,8 @@ input{
 
 .box6__profile{
   width: 100%;
-  height: 230px;
+  height: auto;
+  font-size: 15px;
   border: 3px solid #dcdcdc;
   border-radius:10px;
   padding: 30px;
@@ -1993,14 +1999,12 @@ form{
 }
 
 .box6__profile{
-  height: 300px;
   padding: 25px;
-
 }
 
-.box6__profiles__name{
-  top: 280px;
-  right: 30px;
+.box6__profiles__who{
+  top: 340px;
+  right: 20px;
 }
 
 .box7{

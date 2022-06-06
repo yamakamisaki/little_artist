@@ -8,9 +8,11 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# 以下１行 anonymous %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <%# 以下２行 スライダーjs %>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   </head>
 
   <body>
@@ -27,10 +29,10 @@
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
            <div class="nav__right"> 
-               <p class="nav__btn" id="mypage__btn">
-                  <%= current_user.name %>
-               </p>
-               <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: :nav__btn2 %>
+                <%= link_to (image_tag current_user.image.url  , class: :header__user__img), user_path(current_user) %>
+                <p class="nav__frame" id="mypage__btn">
+                   MENU
+                </p>
            </div>
               
            <ul class="show-lists hidden" id="pull-down">
@@ -47,6 +49,9 @@
                <li class="pull-down-list">
                    <%= link_to "設定", edit_user_registration_path, class: :pulldown__text %>
                </li>
+               <li class="pull-down-list">
+                   <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: :pulldown__text %>
+               </li>
            </ul>
            <%# /ログインの時 %>
         <% else %>
@@ -57,6 +62,7 @@
            </div>
           <% end %>
           <%# /未ログイン時の表示 %>
+
         </div>
       </div>
    </header>
@@ -69,6 +75,7 @@
       <p class="copyright"> © Little Artist  2022 </p>
     </footer>
 
+   <%# 以下１行 スライダーjs %>
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </body>
 </html>

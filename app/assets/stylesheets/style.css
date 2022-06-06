@@ -244,10 +244,43 @@ body{
   position: relative;
 }
 
+.header__user__img{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.nav__frame {
+  font-size: 18px;
+  line-height: 250%;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  position: relative;
+  color: #818181;
+  border: solid 2px #84ceeb;
+  border-radius: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav__frame:before {
+  background-color: #C0E4F2;
+  border-radius: 5px;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: -1;
+  border-radius: 10px;
+}
+
 .show-lists{
   position: absolute;
   top: 90px;
-  right: 200px;
+  right: 40px;
 
   width: 210px;
   margin-top: 20px;
@@ -1256,6 +1289,7 @@ input{
   display: flex;
   justify-content: center;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .box3__title_img{
@@ -1264,24 +1298,27 @@ input{
 }
 
 .box3__title_text{
+  color: #4983bd;
   font-size: 25px;
-  font-weight: bold;
 }
 
 .box3__can{
   width: 450px;
-  height: 250px;
-  font-size: 16px;
+  height: auto;
+  font-size: 18px;
   color: #2b6f8a;
   font-weight: bold;
   padding: 30px;
   background-color: #E9F9FF;
   border-radius: 10px;
+  box-shadow: 7px 7px 1px 1px #bcbec1;
 }
 
 .box3__can span{
   display: block;
   font-size: 17px;
+  color: #818181;
+  font-weight: bold;
   background-color: #FFF;
   border-radius: 10px;
   padding: 5px;
@@ -1365,9 +1402,10 @@ input{
 }
 
 .box6__flex{
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 70px auto 250px;
 }
 
@@ -1383,12 +1421,12 @@ input{
 .box6__profiles{
   position: relative;
   width: 60%;
-  height: 80px;
+  height: auto;
   margin: auto;
 }
 
 .box6__name{
-  width: 50%;
+  width: 80%;
   height: 55px;
   font-size: 30px;
   color: #9a9a9a;
@@ -1398,9 +1436,9 @@ input{
   margin: 0 auto 10px;
 }
 
-.box6__profiles__name{
+.box6__profiles__who{
   position: absolute;
-  top: 200px;
+  top: 280px;
   right: 30px;
   font-size: 60px;
   opacity: 0.2;
@@ -1410,7 +1448,8 @@ input{
 
 .box6__profile{
   width: 100%;
-  height: 230px;
+  height: auto;
+  font-size: 15px;
   border: 3px solid #dcdcdc;
   border-radius:10px;
   padding: 30px;
@@ -1511,6 +1550,16 @@ form{
   grid-template-columns: repeat(3,minmax(200px , 1fr));
 }
 
+.slider_toppage{
+  width: 100%;
+}
+
+.toppage{
+  width: 100%;
+  margin:  0 auto;
+}
+
+
 /* 投稿詳細ページ（items/show） */
 .box26 {
   width: 100%;
@@ -1561,6 +1610,11 @@ form{
  .box5__img{
   width: 800px;
   height: 400px;
+}
+
+.box6__flex{
+  width: 100%;
+  margin: 70px auto 250px;
 }
 
 }
@@ -1617,6 +1671,16 @@ form{
  margin-right: 15px;
  font-size: 12px;
  padding: 7px 7px;
+}
+
+.header__user__img{
+  width: 50px;
+  height: 50px;
+}
+
+.nav__frame {
+  font-size: 15px;
+  line-height: 200%;
 }
 
 /* パン屑リスト */
@@ -1978,14 +2042,12 @@ form{
 }
 
 .box6__profile{
-  height: 300px;
   padding: 25px;
-
 }
 
-.box6__profiles__name{
-  top: 280px;
-  right: 30px;
+.box6__profiles__who{
+  top: 340px;
+  right: 20px;
 }
 
 .box7{

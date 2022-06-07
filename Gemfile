@@ -66,3 +66,4 @@ gem 'ransack'
 gem 'pry-rails'
 gem "gretel"
 gem 'kaminari'
+gem "aws-sdk-s3", require: false

@@ -57,20 +57,22 @@ https://little-artist.herokuapp.com/
 ## 実装した機能についての画像やGIT
 ・トップページ（一覧表示機能）
 [![Image from Gyazo](https://i.gyazo.com/2b1793ab426dd2bcf0bd438892e4124e.png)](https://gyazo.com/2b1793ab426dd2bcf0bd438892e4124e)
+動画
 [![Image from Gyazo](https://i.gyazo.com/fd9e3cb3d5c4624fe2c03fff7d3026e2.gif)](https://gyazo.com/fd9e3cb3d5c4624fe2c03fff7d3026e2)
-・アプリ紹介ページ抜粋
+・アプリ紹介ページ抜粋　動画
 [![Image from Gyazo](https://i.gyazo.com/c334ad0ba1e34525a6b9475308d91564.gif)](https://gyazo.com/c334ad0ba1e34525a6b9475308d91564)
-・マイページ機能
-[![Image from Gyazo](https://i.gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0.png)](https://gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0)
-[![Image from Gyazo](https://i.gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811.png)](https://gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811)
-・作品詳細機能
+・作品詳細機能　動画
 [![Image from Gyazo](https://i.gyazo.com/a25bf4443d50204fe09ff3b9940f9f46.gif)](https://gyazo.com/a25bf4443d50204fe09ff3b9940f9f46)
 ・コメント例
 [![Image from Gyazo](https://i.gyazo.com/61729795e3df6e2bd17c6102d73fbfcf.png)](https://gyazo.com/61729795e3df6e2bd17c6102d73fbfcf)
+・マイページ機能
+[![Image from Gyazo](https://i.gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0.png)](https://gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0)
+[![Image from Gyazo](https://i.gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811.png)](https://gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811)
+
 <br><br>
 
 ## 実装予定の機能
-・お気に入り機能の非同期化
+・お気に入り機能の非同期化<br>
 ・画像投稿時に画像プレビューを表示させる機能
 <br><br>
 

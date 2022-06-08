@@ -29,7 +29,11 @@
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
            <div class="nav__right"> 
+                <% if current_user.image?%>
                 <%= link_to (image_tag current_user.image.url  , class: :header__user__img), user_path(current_user) %>
+                <% else %>
+                <%= link_to (image_tag "default.png" , class: :header__user__img), user_path(current_user) %>
+                <% end %>
                 <p class="nav__frame" id="mypage__btn">
                    MENU
                 </p>

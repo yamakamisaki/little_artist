@@ -18,23 +18,29 @@ https://little-artist.herokuapp.com/
 #### 作品を投稿する
 ---
 1.トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う<br>
-2.ヘッダーに出てくるユーザー名をクリックし、「投稿する」ボタンを押す<br>
+2.ヘッダーに出てくる「メニュー」ボタンをクリックし、「投稿する」ボタンを押す<br>
 3.フォームを入力し、「送信する」ボタンを押す<br>
+[![Image from Gyazo](https://i.gyazo.com/65f8721a28963a94eae90eae47930dca.png)](https://gyazo.com/65f8721a28963a94eae90eae47930dca)
 <br>
 
 #### 自分の投稿を一覧で確認する
 ---
-1.ヘッダーのユーザー名をクリックし、「マイページ」ボタンを押す<br>
-2.下にスクロールすると、自分の投稿が表示される
+1.ヘッダーの「メニュー」ボタン（またはプロフィール画像）をクリックし、「マイページ」ボタンを押す<br>
+2.下にスクロールすると、自分の投稿が表示される<br>
+[![Image from Gyazo](https://i.gyazo.com/c8007c0bfc780af99949f86c2277ee7a.png)](https://gyazo.com/c8007c0bfc780af99949f86c2277ee7a)
 <br>
 
 #### 【マイページの補足】
 ----
 1.ヘッダー直下の「検索」について<br>
-フォームに「検索したいワード」を入力後、「このページから探す」を選択することで、自分の投稿内のみでワード検索することができる<br>
+フォームに「検索したいワード」を入力後、「このページから」を選択することで、自分の投稿内のみでワード検索することができる<br>
+[![Image from Gyazo](https://i.gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811.png)](https://gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811)
+<br>
 
 2.プロフィール内の 「お気に入りの作品 ▼」について<br>
- 「お気に入りの作品 ▼」ボタンをクリックすることで、お気に入り登録した作品を一覧で見ることができる<br><br>
+ 「お気に入りの作品 ▼」ボタンをクリックすることで、お気に入り登録した作品を一覧で見ることができる<br>
+ [![Image from Gyazo](https://i.gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0.png)](https://gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0)
+<br>
 
 ## アプリケーションを作成した背景
 保育の現場で保護者の方と話をする中で「家庭でも発達に即した遊び（制作）をしたいが思いつかない」「５歳児だと５年分の作品になるので、保管場所に悩むことがある」という課題を耳にする機会が多かった。<br><br>
@@ -63,13 +69,8 @@ https://little-artist.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/c334ad0ba1e34525a6b9475308d91564.gif)](https://gyazo.com/c334ad0ba1e34525a6b9475308d91564)
 <br>・作品詳細機能　動画<br>
 [![Image from Gyazo](https://i.gyazo.com/a25bf4443d50204fe09ff3b9940f9f46.gif)](https://gyazo.com/a25bf4443d50204fe09ff3b9940f9f46)
-<br>・コメント例<br>
+<br>・コメント例（成長や思い出を記録できる）<br>
 [![Image from Gyazo](https://i.gyazo.com/61729795e3df6e2bd17c6102d73fbfcf.png)](https://gyazo.com/61729795e3df6e2bd17c6102d73fbfcf)
-<br>・マイページ機能<br>
-[![Image from Gyazo](https://i.gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0.png)](https://gyazo.com/5cb08ad9c0b25ce0cf9f17a5a15b18a0)
-<br>
-[![Image from Gyazo](https://i.gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811.png)](https://gyazo.com/d1f9cbaa41f2038feae5e8ea40e92811)
-
 <br><br>
 
 ## 実装予定の機能

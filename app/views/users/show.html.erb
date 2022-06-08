@@ -28,13 +28,11 @@
        <div class="profile__inner">
 
           <div class="profile__user__image">
-            <div class="profile__user__img">
                 <% if @user.image?%>
-                  <%= image_tag @user.image.url  , class: :profile__user__img %>
+                  <%= image_tag @user.image.url, class: :profile__user__img %>
                 <% else %>
                   <%= image_tag "default.png", class: :profile__user__img  %>
                 <% end %>
-            </div>
           </div>
           
           <div class="profiles__inner__user">

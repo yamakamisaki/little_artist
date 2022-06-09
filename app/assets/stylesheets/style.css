@@ -394,6 +394,17 @@ form{
   display: flex;
 }
 
+#img_prev{
+  display: block;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #aaa;
+  border-radius: 100%;
+  object-fit: cover;
+  padding: 5px;
+  margin: 10px auto;
+}
+
 .field input,textarea{
   width: 100%;
   border: 1.5px solid #aaaaaa;
@@ -461,6 +472,15 @@ input{
 
 .post__field{
   margin-bottom: 40px;
+}
+
+.preview img{
+  display: block;
+  max-width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 7px 7px #e3e3e3;
+  margin: 20px auto;
 }
 
 .post__field label{

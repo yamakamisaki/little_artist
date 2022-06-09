@@ -21,9 +21,9 @@
          <% end %>
 
          <div class="field">
-             <%= f.label :image, "プロフィール画像" %><br/>
-            <% if @user.image.present? %>
-                <%= image_tag @user.image, id: :img_prev %>
+             <%= f.label :image, "プロフィール画像　(デフォルトは猫です)" %><br/>
+            <% if current_user.image.present? %>
+               <img src="<%= current_user.image %>" id ='img_prev'>
             <% else %>
                 <%= image_tag "default.png", id: :img_prev %>
             <% end %>

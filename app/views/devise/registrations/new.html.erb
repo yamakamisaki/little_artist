@@ -47,7 +47,7 @@
 
 
          <div class="field">
-            <%= f.label :image, "プロフィール画像" %><br/>
+            <%= f.label :image, "プロフィール画像　(デフォルトは猫です)" %><br/>
             <% if @user.image.present? %>
                 <%= image_tag @user.image, id: :img_prev %>
             <% else %>

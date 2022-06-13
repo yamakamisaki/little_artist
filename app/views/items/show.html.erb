@@ -16,7 +16,15 @@
         </div>
 
         <div class="post__contents">
-        
+            <%# 投稿者本人の情報を確認する %>
+            <% if user_signed_in? && current_user.id == @item.user_id %>
+                <div class="post__manage">
+                    <%= link_to "編集する", edit_item_path(@item), class: :destroy__btn %>
+                    <%= link_to "削除する", item_path(@item), method: :delete ,class: :destroy__btn, data: {confirm: "本当に削除しますか？"}  %>
+                </div>
+            <% end %>
+            <%# /投稿者本人の情報を確認する %>
+
             <%= image_tag @item.image, class: "post__image" %>
 
             <div class="post__top">
@@ -77,15 +85,20 @@
                 </div>
             <% end %>
 
-            <%# 投稿者本人の場合は表示する %>
+            <%# 投稿者本人の情報を確認する %>
             <% if user_signed_in? && current_user.id == @item.user_id %>
-                <div class="post__manage">
-                    <%= link_to "編集する", edit_item_path(@item), class: :edit__btn %>
-                    <%= link_to "削除する", item_path(@item), method: :delete ,class: :destroy__btn, data: {confirm: "本当に削除しますか？"}  %>
+                <div class="post__manage2">
+                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
+                    <%= link_to "マイページへ →", user_path(current_user), class: :items__btn2 %>
+                </div>
+            <% else %>
+                <div class="post__manage2">
+                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
+                    <%= link_to "#{@item.user.name}の作品へ →", user_path(@item.user), class: :items__btn2 %>
                 </div>
             <% end %>
-            <%# /投稿者本人の場合は表示する %>
-      
+            <%# /投稿者本人の情報を確認する %>
+
      </div>
     
     <%# 以下コメント関連 %>
@@ -122,6 +135,19 @@
 
        </div>
      </div>
+            <%# 投稿者本人の情報を確認する %>
+            <% if user_signed_in? && current_user.id == @item.user_id %>
+                <div class="post__manage2">
+                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
+                    <%= link_to "マイページへ →", user_path(current_user), class: :items__btn2 %>
+                </div>
+            <% else %>
+                <div class="post__manage2">
+                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
+                    <%= link_to "#{@item.user.name}の作品へ →", user_path(@item.user), class: :items__btn2 %>
+                </div>
+            <% end %>
+            <%# /投稿者本人の情報を確認する %>
 
   </div>
  </div>

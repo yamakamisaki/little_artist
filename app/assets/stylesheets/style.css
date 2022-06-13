@@ -905,15 +905,58 @@ input{
 /* ここまで投稿詳細ページのコメント・材料・作り方の枠 */
 
 .post__manage{
-  width: 500px;
-  margin: 100px auto 150px;
+  width: 19%;
+  margin: 100px auto 30px;
   display: flex;
   justify-content : space-between ;
-  color: #84b8eb;
 }
 
 .edit__btn,
-.destroy__btn,
+.destroy__btn{
+  padding: 10px;
+  background-color: #e5e5e5;
+  color: #818181;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius:  10px;
+  text-align: center;
+}
+
+.post__manage2{
+  width: 50%;
+  margin: 50px auto;
+  display: flex;
+  justify-content : space-between ;
+}
+
+.items__btn1,
+.items__btn2{
+  display: block;
+  color: #818181;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius:  50% 60% 50% 70%;
+}
+
+.items__btn1{
+  background-color: #c7c7c7;
+}
+
+.items__btn1:hover{
+  background-color: #90c7fe;
+  color: #FFF;
+}
+
+.items__btn2{
+  background-color: #c7c7c7;
+}
+
+.items__btn2:hover{
+  background-color: #84b8eb;
+  color: #FFF;
+}
+
 .comment__btn{
   width: 200px;
   padding: 10px;
@@ -1510,7 +1553,6 @@ input{
   padding: 20px;
   border-radius: 100px;
   box-shadow: 6px 6px 0 0 #cccccc;
-  animation: shine 1s ease-in-out infinite;
 }
 
 .box7__btn1{
@@ -1847,8 +1889,18 @@ form{
 }
 
 .post__manage{
-  width: 300px;
-  margin: 0 auto 0;
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+.post__manage2{
+  width: 100%;
+}
+
+.items__btn1,
+.items__btn2{
+  font-size: 13px;
+  padding: 10px;
 }
 
 .edit__btn,

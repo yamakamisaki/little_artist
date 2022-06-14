@@ -191,13 +191,13 @@ body{
 
 .inner{
   width: 100%; 
-  height: 85px;
+  height: 75px;
   margin: 20px 0;
 }
 
 .nav{
   width: 100%; 
-  height: 85px;
+  height: 75px;
   display: flex;
   justify-content : space-between ;
   align-items : center ;
@@ -205,8 +205,8 @@ body{
 }
 
 .nav__left{
-  width: 50%; 
-}
+  width: 30%;
+  }
 
 .logo__pc{
   width: 400px;
@@ -252,7 +252,7 @@ body{
   color: #818181;
   font-size: 17px;
   line-height: 75px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .header__user__img{
@@ -1127,9 +1127,8 @@ margin: 8px 0 0 8px;
 
 .profile__main{
   border: 10px solid #84ceeb;
-  
   width: 70%;
-  height: 400px;
+  height: 420px;
   border-radius: 20px;
   box-shadow: 8px 8px 2px 1px #dcd4ff;
   margin: auto;
@@ -1185,18 +1184,32 @@ margin: 8px 0 0 8px;
   margin-bottom: 20px;
 }
 
+.profile__user__icons{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin: 30px auto 10px;
+}
+
+.user__icon{
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.user__icon:hover{
+  margin: 5px 0 0 0;
+}
+
 .profile__user__follows{
   width: 100%;
   height: 40px;
   font-size: 20px;
   display: flex;
-  justify-content: space-around;
-  margin: 30px 0 20px;
-}
-
-.profile__user__follow{
-  color: #84b8eb;
-  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto 20px;
 }
 
 .profile__favorite{
@@ -1220,7 +1233,7 @@ margin: 8px 0 0 8px;
   width: 100%;
   height: 180px;
   border-radius: 5px;
-  margin-top: 40px;
+  margin-top: 0;
 }
 
 .profile__user__prof{
@@ -1757,8 +1770,8 @@ form{
   padding: 40px 10px;
 }
 
-.nav__left{
-  width: 70%; 
+.nav__right{
+  width: 70%;
 }
 
 .logo__mobile{
@@ -1778,6 +1791,11 @@ form{
  padding: 7px 7px;
 }
 
+.header__user__name{
+  font-size: 14px;
+  margin-right: 7px;
+}
+
 .header__user__img{
   width: 50px;
   height: 50px;
@@ -1786,6 +1804,7 @@ form{
 .nav__frame {
   font-size: 15px;
   line-height: 200%;
+  margin-left: 10px;
 }
 
 /* パン屑リスト */
@@ -2019,7 +2038,7 @@ form{
 
 .profile__main{
   border: 7px solid #84ceeb;
-  height: 420px;
+  height: 430px;
   margin-bottom: 80px;
 }
 
@@ -2051,9 +2070,18 @@ form{
   margin: 20px 0 10px;
 }
 
+.profile__user__icons{
+  width: 100%;
+}
+
+.user__icon{
+  width: 40px;
+  height: 40px;
+}
+
 .profile__user__profile{
   height: 240px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .profile__user__prof{

@@ -30,7 +30,7 @@
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
            <div class="nav__right"> 
-                <%= link_to  "ようこそ！#{current_user.name}さん", user_path(current_user), class: :header__user__name %>
+                <%= link_to  current_user.name, user_path(current_user), class: :header__user__name %>
                 <% if current_user.image?%>
                    <%= link_to (image_tag current_user.image.url  , class: :header__user__img), user_path(current_user) %>
                 <% else %>

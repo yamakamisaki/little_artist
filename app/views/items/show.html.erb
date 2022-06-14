@@ -135,19 +135,6 @@
 
        </div>
      </div>
-            <%# 投稿者本人の情報を確認する %>
-            <% if user_signed_in? && current_user.id == @item.user_id %>
-                <div class="post__manage2">
-                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
-                    <%= link_to "マイページへ →", user_path(current_user), class: :items__btn2 %>
-                </div>
-            <% else %>
-                <div class="post__manage2">
-                    <%= link_to "← トップページへ", root_path, class: :items__btn1 %>
-                    <%= link_to "#{@item.user.name}の作品へ →", user_path(@item.user), class: :items__btn2 %>
-                </div>
-            <% end %>
-            <%# /投稿者本人の情報を確認する %>
 
   </div>
  </div>

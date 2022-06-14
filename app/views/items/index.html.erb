@@ -1,14 +1,18 @@
-<div class="topver">
-   <%= render partial: "searchver" %> 
-</div>
+<div class="topver"></div>
 
       <div class="index_top">
             <div class="index__left__img">
-               <%= image_tag "site/box5.png", class:"index__left__img" %>
+               <%= link_to image_tag( "site/box5.png",class: :index__left__img  ),  users_path%>
             </div>
-                <%= link_to "Click", users_path ,class: :index__right %>
+            <div class="index_top_btn">
+                <%= link_to image_tag( "toppage1",class: :index__btn1  ),  users_path%>
+                <%= link_to image_tag( "toppage2",class: :index__btn2  ),  "#item__index"%>
+            </div>
       </div>
 
+<div class="topver" id="item__index">
+   <%= render partial: "searchver" %> 
+</div>
 
 <div class="main">
   <div class="main-contents index">
@@ -28,7 +32,7 @@
 
 <% if @items.present? %>
       <div class="slider_toppage">
-        <p class="slider_toppage_p">気になる作品をCheck！</p>
+        <p class="slider_toppage_p">気になる作品をクリック！</p>
 
         <div class="slider toppage">
            <% @items.each do |items| %>

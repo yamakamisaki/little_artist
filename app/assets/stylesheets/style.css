@@ -538,11 +538,50 @@ input{
 /* トップページ（items/index）
 ---------------------------------------------- */
 
-.index{
-  height: 80%;
+.index_top__login{
+  width: 100%;
+  height: 300px;
 }
 
-.index_top{
+.index__login__container{
+  width: 50%;
+  margin:20px auto;
+}
+
+.index__login__flex{
+  display: flex;
+}
+
+.index__login1{
+  width: 230px;
+  height: 230px;
+  margin: 5px;
+}
+
+.index__login__contents{
+  width: 60%;
+  height: 250px;
+  margin: auto;
+}
+
+.index__login__content{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+.index__login__box{
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.index__login__box:hover,
+.index__login1:hover{
+  margin: 8px 0 0 8px;
+}
+
+.index_top__unlogin{
   width: 100%;
   height: auto;
   margin: auto;
@@ -684,6 +723,10 @@ margin: 8px 0 0 8px;
   border-radius: 5px;
   padding: 4px;
 } */
+
+.index{
+  height: 80%;
+}
 
 /* １列４投稿にしたい場合はこちらを使用 */
 .item__wrapper{
@@ -1666,7 +1709,11 @@ margin: 8px 0 0 8px;
 }
 
 .nav__left{
-  width: 70%; 
+  width: auto; 
+}
+
+.header__user__name{
+  font-size: 15px;
 }
 
 /* 新規登録・ログイン */
@@ -1703,6 +1750,10 @@ form{
   width: 100px;
   height: 100px;
   margin: 0 auto 5px;
+}
+
+.index__login__container{
+  width: 100%;
 }
 
 .item__wrapper{
@@ -1929,6 +1980,31 @@ form{
   width: 500px;
   height: 250px;
   margin: 0 100px 20px 0;
+}
+
+.index_top__login{
+  width: 100%;
+  height: auto;
+}
+
+.index__login__container{
+  width: 90%;
+  margin:20px auto;
+}
+
+.index__login__contents{
+  width: 60%;
+  height: auto;
+}
+
+.index__login1{
+  width: 150px;
+  height: 150px;
+}
+
+.index__login__box{
+  width: 60px;
+  height: 60px;
 }
 
 .item__wrapper{

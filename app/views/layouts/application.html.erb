@@ -37,15 +37,19 @@
                    <%= link_to (image_tag "default.png" , class: :header__user__img), user_path(current_user) %>
                 <% end %>
 
+               <%# PC表示 %>
                 <div class="nav__pc">
                      <p class="nav__frame" id="mypage__btn">
                         MENU
                      </p>
                 </div>
+                <%# /PC表示 %>
 
-                <div class="nav__mobile">
+               <%# mobile表示 %>
+               <div class="nav__mobile">
                      <%= image_tag "menu.png", id: :mypage__btn__mobile %>
-                </div>
+               </div>
+               <%# /mobile表示 %>
            </div>
               
            <ul class="show-lists hidden" id="pull-down">

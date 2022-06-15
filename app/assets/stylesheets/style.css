@@ -264,6 +264,14 @@ body{
   padding: 3px;
 }
 
+.nav__mobile{
+  display: none;
+}
+
+.nav__pc{
+  display: block;
+}
+
 .nav__frame {
   font-size: 18px;
   line-height: 300%;
@@ -1825,6 +1833,11 @@ form{
  padding: 7px 7px;
 }
 
+.nav__right{
+  display: flex;
+  justify-content: right;
+}
+
 .header__user__name{
   font-size: 14px;
   margin-right: 7px;
@@ -1835,10 +1848,16 @@ form{
   height: 50px;
 }
 
-.nav__frame {
-  font-size: 15px;
-  line-height: 200%;
-  margin-left: 10px;
+.nav__pc
+{
+  display: none;
+}
+
+.nav__mobile{
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
 }
 
 /* パン屑リスト */
@@ -1950,6 +1969,16 @@ form{
 
 .item__user__over:hover{
   font-size: 10px;
+}
+
+.go_link__user{
+  /* 基準はitem */
+  position: absolute;
+  top: 150px;
+  right: -50px;
+  
+  width: 40px;
+  height: 40px;
 }
 
 .slider_toppage_p{

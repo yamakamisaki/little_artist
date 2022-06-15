@@ -3,12 +3,13 @@ class UsersController < ApplicationController
   before_action :set_search, only: :show
 
   def index
-    @items = Item.all.order('created_at DESC')
+    @items = Item.all.order("RAND()")
   end
 
   def show
     @search_user = @user.id
     @items = @user.items.order('created_at DESC').page(params[:page]).per(12)
+    @user_items = @user.items.order("RAND()")
   end
 
   def favorites

@@ -93,3 +93,16 @@
 
   </div>
 </div>
+
+<% if @user_items.present? %>
+      <div class="slider_toppage">
+        <p class="slider_toppage_p"><%= @user.name %>さんの作品展</p>
+
+        <div class="slider toppage">
+           <% @user_items.each do |items| %>
+             <div><%= link_to image_tag( items.image , class: :slider__img_toppage ),  item_path(items.id)%>
+             </div>
+           <% end %>
+          </div>
+       </div>
+<% end %>

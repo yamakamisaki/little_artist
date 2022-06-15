@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all.order('created_at DESC').page(params[:page]).per(12)
+    @rund_items = Item.all.order("RAND()")
   end
 
   def new
@@ -23,6 +24,7 @@ class ItemsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @item.comments.includes(:user)
+    @items = Item.all.order('created_at DESC')
   end
 
   def edit

@@ -688,6 +688,7 @@ margin: 8px 0 0 8px;
 }
 
 .item{
+  position: relative;
   width: 200px;
   height: 220px;
   margin-bottom: 80px;
@@ -745,6 +746,10 @@ margin: 8px 0 0 8px;
   padding: 6px;
 }
 
+.item__user__under:hover + .go_link__user{
+  display: block;
+}
+
 .item__user__over{
   height: 35px;
   line-height: 200%;
@@ -764,17 +769,34 @@ margin: 8px 0 0 8px;
   border-radius: 5px;
   padding: 4px;
 }
+
+.item__user__over:hover + .go_link__user{
+  display: block;
+}
+
+.go_link__user{
+  display: none;
+  /* 基準はitem */
+  position: absolute;
+  bottom: -20px;
+  right: -80px;
+  
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;  
+}
+
 /* ここまで１列３投稿の場合表示 */
 
 .slider_toppage{
+  height: 500px;
   background-color: #90cee9;
   padding-top: 50px;
 }
 
 .slider_toppage_p{
-  display: block;
   width: 30%;
-  color: #9e9e7b;
+  color: #818181;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
@@ -818,6 +840,7 @@ margin: 8px 0 0 8px;
 }
 
 .post__top{
+  position: relative;
   width: 500px;
   display: flex;
   justify-content : space-between ;
@@ -859,9 +882,20 @@ margin: 8px 0 0 8px;
   padding: 7px;
 }
 
-.item__post__user:hover{
-  background-color:  #fffabe;
-  color: #9a9a9a;
+.go_link{
+  display: none;
+  /* 基準はpost__top */
+  position: absolute;
+  top: -75px;
+  right: -110px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+
+.item__post__user:hover + .go_link{
+  display: block;
 }
 
 .post__item__favorite{
@@ -1943,6 +1977,16 @@ form{
 
 .item__post__user{
   font-size: 17px;
+}
+
+.go_link{
+  /* 基準はpost__top */
+  position: absolute;
+  top: -40px;
+  right: -70px;
+
+  width: 60px;
+  height: 60px;
 }
 
 .post__image{  

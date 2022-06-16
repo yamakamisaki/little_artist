@@ -45,11 +45,11 @@
                 <%# ログインしているページが本人か確認する %>
                 <% if user_signed_in? && current_user.id == @user.id %>
                     <div class="profile__user__icons">
-                        <%= link_to image_tag( "icon1",class: :user__icon  ),  users_path%>
-                        <%= link_to image_tag( "icon3",class: :user__icon  ),  new_item_path%>
-                        <%= link_to image_tag( "icon2",class: :user__icon  ),  favorites_user_path(@user)%>
-                        <%= link_to image_tag( "icon4",class: :user__icon  ),  destroy_user_session_path, method: :delete%>
-                        <%= link_to image_tag( "icon5",class: :user__icon  ),  edit_user_registration_path%>
+                        <%= link_to image_tag( "icon1.png",class: :user__icon  ),  users_path%>
+                        <%= link_to image_tag( "icon3.png",class: :user__icon  ),  new_item_path%>
+                        <%= link_to image_tag( "icon2.png",class: :user__icon  ),  favorites_user_path(@user)%>
+                        <%= link_to image_tag( "icon4.png",class: :user__icon  ),  destroy_user_session_path, method: :delete%>
+                        <%= link_to image_tag( "icon5.png",class: :user__icon  ),  edit_user_registration_path%>
                     </div>
                 <% else %>
                     <div class="profile__user__follows"> 

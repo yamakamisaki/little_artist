@@ -1445,7 +1445,6 @@ margin: 8px 0 0 8px;
   width: 400px;
   height: 300px;
   margin: auto;
-  animation: balloon 6s forwards;
 }
 
 .box3{
@@ -1880,8 +1879,8 @@ form{
 .nav__btn,
 .nav__btn2{
  margin-right: 15px;
- font-size: 12px;
- padding: 7px 7px;
+ font-size: 17px;
+ padding: 10px;
 }
 
 .nav__right{
@@ -2110,8 +2109,8 @@ form{
 }
 
 .post__manage{
-  width: 80%;
-  margin: 0 auto 50px;
+  width: 50%;
+  margin: 0 auto 40px;
 }
 
 .post__manage2{
@@ -2125,7 +2124,12 @@ form{
 }
 
 .edit__btn,
-.destroy__btn,
+.destroy__btn{
+  padding: 10px;
+  font-size: 14px;
+}
+
+
 .comment__btn{
   width: 120px;
   font-size: 15px;

@@ -1,9 +1,9 @@
-function pullDown() {
+function pullDownMobile() {
 
-  const mypageBtn = document.getElementById("mypage__btn");
+  const mypageBtnMobile = document.getElementById("mypage__btn__mobile");
   const pullDown = document.getElementById("pull-down");
 
-  mypageBtn.addEventListener('mouseover', function() {
+  mypageBtnMobile.addEventListener('mouseover', function() {
     if (pullDown.getAttribute("style") == "display:block;") {
         pullDown.removeAttribute("style", "display:block;");
     } else {
@@ -13,4 +13,4 @@ function pullDown() {
 
 };
 
-window.addEventListener('load', pullDown);
+window.addEventListener('load', pullDownMobile);

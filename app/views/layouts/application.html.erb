@@ -21,7 +21,7 @@
   <header class="header">
       <div class="inner">
         <div class="nav">
-
+     
           <div class="nav__left">
              <%= link_to (image_tag "logo.png", class:"logo__pc") , root_path %>
              <%= link_to (image_tag "logo_responsive.png", class:"logo__mobile") , root_path %>
@@ -30,14 +30,26 @@
           <%# ログイン時の表示 %>
           <% if user_signed_in? %>
            <div class="nav__right"> 
+                <%= link_to  current_user.name, user_path(current_user), class: :header__user__name %>
                 <% if current_user.image?%>
-                <%= link_to (image_tag current_user.image.url  , class: :header__user__img), user_path(current_user) %>
+                   <%= link_to (image_tag current_user.image.url  , class: :header__user__img), user_path(current_user) %>
                 <% else %>
-                <%= link_to (image_tag "default.png" , class: :header__user__img), user_path(current_user) %>
+                   <%= link_to (image_tag "default.png" , class: :header__user__img), user_path(current_user) %>
                 <% end %>
-                <p class="nav__frame" id="mypage__btn">
-                   MENU
-                </p>
+
+               <%# PC表示 %>
+                <div class="nav__pc">
+                     <p class="nav__frame" id="mypage__btn">
+                        MENU
+                     </p>
+                </div>
+                <%# /PC表示 %>
+
+               <%# mobile表示 %>
+               <div class="nav__mobile">
+                     <%= image_tag "menu.png", id: :mypage__btn__mobile %>
+               </div>
+               <%# /mobile表示 %>
            </div>
               
            <ul class="show-lists hidden" id="pull-down">
@@ -65,8 +77,8 @@
                 <%= link_to "新規登録", new_user_registration_path, class: :nav__btn %>
                 <%= link_to "ログイン", new_user_session_path, class: :nav__btn2 %>
            </div>
-          <% end %>
-          <%# /未ログイン時の表示 %>
+        <% end %>
+        <%# /未ログイン時の表示 %>
 
         </div>
       </div>
@@ -75,7 +87,7 @@
    <% breadcrumb :root %>
 
    <%= yield %>
-
+   
     <footer class="footer">
       <p class="copyright"> © Little Artist  2022 </p>
     </footer>

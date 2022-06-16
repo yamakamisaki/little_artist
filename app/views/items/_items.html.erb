@@ -26,9 +26,11 @@
 
         <%# ユーザー名の文字数で表示を変える %>
             <% if items.user.name.length <= 8  %>
-            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__under %>
+                <%= link_to items.user.name , user_path(items.user_id), class: :item__user__under %>
+                <%= image_tag "click.png", class: "go_link__user" %>
             <% else %>
-            <%= link_to items.user.name , user_path(items.user_id), class: :item__user__over %>
+                <%= link_to items.user.name , user_path(items.user_id), class: :item__user__over %>
+                <%= image_tag "click.png", class: "go_link__user" %>
             <% end %>
         <%# /ユーザー名の文字数で表示を変える %>
         

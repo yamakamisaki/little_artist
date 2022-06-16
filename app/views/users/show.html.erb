@@ -42,11 +42,24 @@
                     </div>
                 </div>
 
-                <div class="profile__user__follows">
-                  <%# <p>フォロー</p><div class="profile__user__follow">３０</div>
-                  <p>フォロワー</p><div class="profile__user__follow">５０００</div> %>
-                  <%= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: :profile__favorite %>
-                </div>
+                <%# ログインしているページが本人か確認する %>
+                <% if user_signed_in? && current_user.id == @user.id %>
+                    <div class="profile__user__icons">
+                        <%= link_to image_tag( "icon1",class: :user__icon  ),  users_path%>
+                        <%= link_to image_tag( "icon3",class: :user__icon  ),  new_item_path%>
+                        <%= link_to image_tag( "icon2",class: :user__icon  ),  favorites_user_path(@user)%>
+                        <%= link_to image_tag( "icon4",class: :user__icon  ),  destroy_user_session_path, method: :delete%>
+                        <%= link_to image_tag( "icon5",class: :user__icon  ),  edit_user_registration_path%>
+                    </div>
+                <% else %>
+                    <div class="profile__user__follows"> 
+                      <%# <p>フォロー</p><div class="profile__user__follow">３０</div>
+                      <p>フォロワー</p><div class="profile__user__follow">５０００</div> %>
+                      <%= link_to "お気に入りの作品 ▼", favorites_user_path(@user), class: :profile__favorite %> 
+                    </div> 
+                <% end %>
+                <%# /ログインしているページが本人か確認する %>
+
 
                 <div class="profile__user__profile">
                     <div class="profile__user__prof">
@@ -58,6 +71,19 @@
        </div>
      </div>
 
+     <div class="topver">
+  <div class="topver-search">
+     <%= search_form_for @q, url: search_items_path, class: :search__form__users do |f| %>
+       <%= f.text_field :text_or_age_or_material_or_making_cont, placeholder: '検索したいワードを入力', class: :search__form %>
+       <%= f.radio_button :user_id_eq, '' %><p class="search__radiobtn">全ての投稿から</p>
+       <%= f.radio_button :user_id_eq, @search_user %><p class="search__radiobtn">このページから</p>
+       <%= f.submit '検索', class: :search__submit %>
+     <% end %>
+  </div>
+</div>
+<br>
+
+
      <div class="item__wrapper">
           <% @items.each do |items| %>
           <%# 部分テンプレートでフォームを表示する %>
@@ -67,3 +93,16 @@
 
   </div>
 </div>
+
+<% if @user_items.present? %>
+      <div class="slider_toppage">
+        <p class="slider_toppage_p"><%= @user.name %>さんの作品展</p>
+
+        <div class="slider toppage">
+           <% @user_items.each do |items| %>
+             <div><%= link_to image_tag( items.image , class: :slider__img_toppage ),  item_path(items.id)%>
+             </div>
+           <% end %>
+          </div>
+       </div>
+<% end %>
